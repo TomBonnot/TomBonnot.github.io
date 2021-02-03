@@ -222,9 +222,14 @@ input, select, textarea {
 			color: #34a58e !important;
 		}
 
+		#main .thumb:hover{
+			transform: scale(1.1);
+			z-index:+1;
+		}
+
 	strong, b {
 		color: #ffffff;
-		font-weight: 300;
+		font-weight: 700;
 	}
 
 	em, i {
@@ -1369,10 +1374,10 @@ input, select, textarea {
 		-ms-transition: -moz-filter 0.5s ease, -webkit-filter 0.5s ease, -ms-filter 0.5s ease, -ms-filter 0.5s ease;
 		transition: -moz-filter 0.5s ease, -webkit-filter 0.5s ease, -ms-filter 0.5s ease, filter 0.5s ease;
 		position: relative;
-		background-repeat: no-repeat;
+		background-image: url("./images/screen_2.png");
+		background-repeat: no-repeat; 
 		background-color: #1f2937;
 		background-attachment: fixed;
-
 	}
 
 		#wrapper:after {
@@ -1457,10 +1462,6 @@ input, select, textarea {
 
 /* Header */
 
-	#header_true{
-		background-image: url("./images/screen_2.png");
-	}
-
 	body {
 		padding: 0 0 4em 0;
 	}
@@ -1477,7 +1478,7 @@ input, select, textarea {
 		-moz-user-select: none;
 		-ms-user-select: none;
 		-webkit-user-select: none;
-		background: #1f2224;
+		background: #3a495a;
 		bottom: -1em;
 		height: 5em;
 		left: 0;
@@ -1622,6 +1623,10 @@ input, select, textarea {
 			overflow: hidden;
 			position: relative;
 		}
+
+			#main .thumb:hover {
+				padding: 50px;
+			}
 
 			#main .thumb:after {
 				background-image: -moz-linear-gradient(to top, rgba(10,17,25,0.35) 5%, rgba(10,17,25,0) 35%);
