@@ -1369,6 +1369,10 @@ input, select, textarea {
 		-ms-transition: -moz-filter 0.5s ease, -webkit-filter 0.5s ease, -ms-filter 0.5s ease, -ms-filter 0.5s ease;
 		transition: -moz-filter 0.5s ease, -webkit-filter 0.5s ease, -ms-filter 0.5s ease, filter 0.5s ease;
 		position: relative;
+		background-repeat: no-repeat;
+		background-color: #1f2937;
+		background-attachment: fixed;
+
 	}
 
 		#wrapper:after {
@@ -1452,6 +1456,10 @@ input, select, textarea {
 		}
 
 /* Header */
+
+	#header_true{
+		background-image: url("./images/screen_2.png");
+	}
 
 	body {
 		padding: 0 0 4em 0;
