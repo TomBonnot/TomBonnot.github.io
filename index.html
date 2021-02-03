@@ -1,0 +1,490 @@
+<!DOCTYPE HTML>
+<!--
+	Prologue by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/brands.css" integrity="sha384-1KLgFVb/gHrlDGLFPgMbeedi6tQBLcWvyNUN+YKXbD7ZFbjX6BLpMDf0PJ32XJfX" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/fontawesome.css" integrity="sha384-jLuaxTTBR42U2qJ/pm4JRouHkEDHkVqH0T1nyQXn1mZ7Snycpf6Rl25VBNthU4z0" crossorigin="anonymous">
+		<script>
+			var num_block = 0;
+			function display(num_block){
+				switch(num_block){
+					case 1: 
+						if(document.getElementById('Button_1').innerHTML == '+'){
+							document.getElementById('Button_1').innerHTML = '-';
+							document.getElementById('Hidden_1').style.display='block';
+						}
+						else {
+							document.getElementById('Button_1').innerHTML = '+';
+							document.getElementById('Hidden_1').style.display = 'none';
+						}
+						break;
+					case 2: 
+						if(document.getElementById('Button_2').innerHTML == '+'){
+							document.getElementById('Button_2').innerHTML = '-';
+							document.getElementById('Hidden_2').style.display='block';
+						}
+						else {
+							document.getElementById('Button_2').innerHTML = '+';
+							document.getElementById('Hidden_2').style.display = 'none';
+						}
+						break;
+					case 3: 
+						if(document.getElementById('Button_3').innerHTML == '+'){
+							document.getElementById('Button_3').innerHTML = '-';
+							document.getElementById('Hidden_3').style.display='block';
+						}
+						else {
+							document.getElementById('Button_3').innerHTML = '+';
+							document.getElementById('Hidden_3').style.display = 'none';
+						}
+						break;
+					case 4: 
+						if(document.getElementById('Button_4').innerHTML == '+'){
+							document.getElementById('Button_4').innerHTML = '-';
+							document.getElementById('Hidden_4').style.display='block';
+						}
+						else {
+							document.getElementById('Button_4').innerHTML = '+';
+							document.getElementById('Hidden_4').style.display = 'none';
+						}
+						break;
+					case 5: 
+						if(document.getElementById('Button_5').innerHTML == '+'){
+							document.getElementById('Button_5').innerHTML = '-';
+							document.getElementById('Hidden_5').style.display='block';
+						}
+						else {
+							document.getElementById('Button_5').innerHTML = '+';
+							document.getElementById('Hidden_5').style.display = 'none';
+						}
+						break;
+					default:
+						console.log('default');
+				}
+
+			}
+		</script>
+		<title>Tom Bonnot - </title>
+	</head>
+	<body class="is-preload">
+
+				<!-- Header -->
+			<div id="header">
+
+				<div class="top">
+
+				<!-- Logo -->
+						<div id="logo">
+							<span class="image avatar48"><img src="images/avatar.jpg" alt="CalvineAndHobbesHalloween" /></span>
+							<h1 id="title">Tom Bonnot</h1>
+							<p>Graphist 3D</p>
+						</div>
+
+				<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li><a href="#top" id="top-link"><span class="icon fa-home">Intro</span></a></li>
+								<li><a href="#portfolio" id="portfolio-link"><span class="icon fa-th">Portfolio</span></a></li>
+								<li><a href="#about" id="about-link"><span class="icon fa-user">About Me</span></a></li>
+								<li><a href="#contact" id="contact-link"><span class="icon fa-envelope">Contact</span></a></li>
+							</ul>
+						</nav>
+
+				</div>
+
+				<div class="bottom">
+
+				<!-- Social Icons -->
+						<ul class="icons">
+							<li><a href="https://twitter.com/RoutardRageux" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="https://www.facebook.com/tom.bonnot.39" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+							<li><a href="https://github.com/RoutardRageux" class="icon fa-github"><span class="label">Github</span></a></li>
+							<li><a href="https://www.artstation.com/routard" class="fab fa-artstation"><span class="label"></span></a></li>
+							<li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+
+				</div>
+
+			</div>
+
+				<!-- Main -->
+			<div id="main">
+
+				<!-- Intro -->
+					<section id="top" class="one dark cover">
+						<div class="container">
+
+							<header>
+								<h2 class="alt"><strong>Hi! I'm Tom Bonnot</strong></h2>
+								<p style="color : #FFFFFF; background-color: rgba(0,0,0,0.50);">In possession of a Master Degree in Game Management and Game Design<br>
+								I have for objective to become a Game Artist 3D or a Game Designer</p>
+							</header>
+
+							<footer>
+								<a href="./images/CV_TOM_Artist_3D-Paris-min.png" class="button scrolly"> My Résumé (CV)</a>
+							</footer>
+
+						</div>
+					</section>
+
+				<!-- Portfolio -->
+					<section id="portfolio" class="two">
+						<div class="container">
+
+							<header>
+								<h2 style="text-decoration: border;"><strong>Portfolio</strong></h2>
+							</header>
+				<!-- Projects -->
+
+						<div class="row">
+							<div class="col-6 col-12-mobile">
+								<article class="item" style="padding: 20px;"> 
+									<div class="image fit" style="padding-top: 22px; padding-bottom: 22px">
+										<a class="image fit"><img src="images/SomeLevel_2-min.png" alt="My project for the Master, 5months to make it" /></a>
+
+										<button id="Button_1" onClick="display(1);">+</button>
+
+										<h2 class="article_abme" id="Hidden_1" style="padding-top: 22px; padding-bottom: 22px"> In this Master we are 12 groups of 2 or 3 persons to create and propose a project that we will have to present to the CODIR (COmité DIRecteur, COmmittee DIRector) and they will choose 6 out of thoses 12. A Game Design Document (GDD) has been created, an history, characters, world, gameplay, target audiance, marketting strategy has been made up. From now on we have 5 months to create a real prototype of this game, will be 10 persons per group. 
+										<br><br>
+										This is Poulpoutou, speech : <br>
+										Start an aventure surounded by squids and incarnate the Emperor's son to discover what is hiding behind this cute and harmless appearance world...<br>
+										It's up to you to find what the comique and satyre can hide in this under water world. 
+										<br><br>
+										Ludovic Gibault as Lead Developer and Project Owner (creator) with Hakim Loukil and Lionel Bezamanifary as developers, Marince Capela as lead 3D Animation, me as Lead 3D graphist and SCRUM Master (creator) with Yanis Ouaglal as 2D Artist (learned 3D with me and helped), Maxime Reminger as Lead Narration and Hugo Caumon and Etienne Blachon as Compositors.
+										<br>
+										We've presented this project at the Play Azur Festival in Nice and in the International Festival of Games in Cannes (FIJ), people liked it very much and was impressed by the time we've used to make this, and as we've wanted, the "Poulpoutou" word didn't miss because everyone stopped at least one second to check what it was about.
+										<br>We had our last CODIR after the  FIJ and our project has been the best over the others and a real success for us because we've done everything the way we were expecting. With Ludovic we showed that we were able to handle, lead, and show a project with a team. Plus our compositors were in Grenoble (not in the same university) so I had to move there to follow through the creations of the sound design. 
+										<br> Our best project so far, we've learned so much during this time and it was with pure pleasure.  
+										</h2>
+									</div>
+									<div class="image fit">
+										<a class="image fit"><img src="images/SuperEbourgeonMan.jpg" alt="Viedogame made at a Game Jam from the Master" /></a>
+
+										<button id="Button_2" onClick="display(2);">+</button>
+
+										<h2 class="article_abme" id="Hidden_2" style="padding-top: 22px; padding-bottom: 22px">
+										I did this video game "Super EbourgeonMan" at a GameJam organized by the Master HIC. 2 days to develop this game in full 3D, I did all the assets and I'm pretty proud of myself and I was afraid of not being able to make it. At least it went way better than expected. It is a score game where you are a farmer that needs to go through his fields to destroy any weeds but do not cut any corn. The more you go faster you are. Looking forward the next Game Jam which is the <a href="https://globalgamejam.org/"> Global Game Jam the 25-27 January. </a>
+										</h2>
+									</div>
+								</article>
+							</div>
+							<div class="col-6 col-12-mobile">
+								<article class="item" style="padding: 20px;"> 
+									<div class="image fit" style="padding-top: 22px;">
+										<a href="https://globalgamejam.org/2019/games/rubikscare" class="image fit"><img src="images/Min/Rubik_scare.PNG" alt="Viedogame made at a Game Jam from the Master" /></a>
+
+										<button id="Button_3" onClick="display(3);">+</button>
+										
+										<h2 class="article_abme" id="Hidden_3" style="padding-top: 22px; padding-bottom: 22px">
+											We created a game this weekend on the theme of "How do you see your Home", and we got an idea.
+											<br> What is home for us ? At first it's a place where we will feel secure, nott threatened by anything, justt being here and taking good time. But, in our mind if  we stay too much long into our home, it could be very dangerous and will close ourselves to the World. We discussed for the first 2 hours of this GGJ (Global Game Jam) and then we started with an idea : Rubik'scare. 
+											<br> It's a rogue like game on the theme of a rubikscube, and we wanted to use a isometric view and a cell shading effect on Unity. We started building levele design, game design, rules of games, how we can play etc... And then we have Cubal, a big colored cube into a colored world, who need to go find his relatives in a dangerous world to build up his home, a rubikscube. He will unlock skills along his path and you will have to help him building his home. 
+											<br> In this game there is actually 5 primary levels, and then 4 levels by skill (they are 4). 5 Halls, 4 levels by skill, why 4 ? It's because, the first Hall you'll complete, it'll be raw, then you unlock a skill. After this, you'll do another Hall, but you have a new skill, then, on of the relatives on this Hall will be places somewhere else to put a level about this skill. 
+											<br><a href="https://globalgamejam.org/2019/games/rubikscare"> Here you can find the game and everything you need.</a>
+										</h2>
+
+										<a href="https://www.facebook.com/ProjetSpectres/"><img src=""></a>
+									</div>
+								<div class="col-6 col-12-mobile">
+									<div style="padding-top: 22px;">
+										<a href="https://globalgamejam.org/2020/games/just-fix-it-9" class="image fit"><img src="images/Min/Just_Fix_It.png" alt="Viedogame made at a Game Jam from Montpellier - Sud PICCEL and Epitech" /></a>
+
+										<button id="Button_4" onClick="display(4);">+</button>
+										
+										<h2 class="article_abme" id="Hidden_4" style="padding-top: 22px; padding-bottom: 22px">
+											We created a game this weekend on the theme of "Repair", and we got an idea.
+											<br> To repair is "restore (something damaged, faulty, or worn) to a good condition." (from Oxford Languages), whaat is a good condition ? is it working or is it another state of the object ? We thought about it and we created a repairing station where the worker gets an object to repair, he has tools to remove things and he has to put new stuff on, when everything is done, he can put back the "repaired object" where he found it. 
+											<br> You can rotate the object and buttons are assigned to any things to remove or add, and you need to select the proper tool to remove or the thing to add. As simple as that.
+											<br><a href="https://globalgamejam.org/2020/games/just-fix-it-9"> Here you can find the game and everything you need.</a>
+										</h2>
+
+										<a href="https://www.facebook.com/ProjetSpectres/"><img src=""></a>
+									</div>
+								</div>
+								</article>
+							</div>
+							<div class="col-6 col-12-mobile">
+								<article class="item" style="padding: 20px;"> 
+									<div class="image fit" style="padding-top: 22px;">
+										<a href="https://routard.itch.io/medex-rogue-and-learn" class="image fit"><img src="images/MELEC_Banner_01.png" alt="Viedogame made at the Mix&Jam"/></a>
+
+										<button id="Button_5" onClick="display(5);">+</button>
+										
+										<h2 class="article_abme" id="Hidden_5" style="padding-top: 22px; padding-bottom: 22px">
+											With Yoann Maisonneuve, Anthony Cuttivet and Hélene Litzler we've particpated to this gamejam in Novembre, the Mix&jam (that's why the name is Melec, from Mélange et Confiture, litérally Mix&jam in French). A Mix between education and Rogue Like, we want that learning the Periodic Table through game is easier. You are a crazy scientific synthwave boy going through a 80's futuristic world, destroying Beakers filled with bad component with a Test Tube, when defeated they'll drop some atoms that you will grab and stock into your weapon. The first atom will define your attack buff.
+											You will have to discover all atoms of the periodic table (named MELEX here; only the ones we could have add in the game) by merging two atoms rightly.
+											<br>
+											Completing the MELEX is the end of the game, but be careful, it won't be possible in one single run, even if you beat the radioactive boss. 
+											<br>
+											Beating the boss will give you a choice between three rare atoms, the one you pick will be your first for the next run.
+											<br>
+											MELEC is the result of a combination from a Rogue Like, Shooter and Educative game, we also wanted to combined 2D and 3D graphics to dig deeper into the Jam's theme. Moreover we mixed good old Synthwave and rightful Chemistry (and that's pretty cool) !
+											<br> Good luck AT-0M Merger ! 
+											<br> GameJam's Team : <br>
+												Yoann MAISONNEUVE : Unity Developer - Git Master <br>
+												Anthony CUTTIVET : Unity Developer <br>
+												Hélène LITZLER : 2D Game Artist, UI/UX Artist <br>
+												Tom BONNOT : 3D Game Artist, Level Designer <br>
+										</h2>
+									</div>
+								</article>
+							</div>
+						</div>
+				<!-- Sktechfab -->
+						<div class="row" style="margin-top: 40px;">
+								<div class="col-4 col-12-mobile">
+									<article class="item">
+										<a href="https://www.artstation.com/artwork/9eke3N">
+											<div class="image fit">
+												<img src="images/Screen_Dofus_zaap.png">
+											</div>
+											<header>
+												<h3>Dofus Kolizeum Zaap</h3>
+											</header>
+										</a>
+									</article>
+									
+									<article class="item">
+										<div class="image fit">
+											<iframe class="image fit" width="420" height="286" src="https://sketchfab.com/models/e4b300fac8f44b2ea76116392a0ef977/embed" frameborder="0" allow="autoplay; fullscreen; vr" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+											<p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">
+											    <a href="https://sketchfab.com/models/e4b300fac8f44b2ea76116392a0ef977?utm_medium=embed&utm_source=website&utm_campaign=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Fire place from Monsters, Inc.</a>
+											    by <a href="https://sketchfab.com/Routard?utm_medium=embed&utm_source=website&utm_campaign=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Routard</a>
+											    on <a href="https://sketchfab.com?utm_medium=embed&utm_source=website&utm_campaign=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a>
+											</p>
+										</div>
+										<header>
+											<h3>Fire Place</h3>
+										</header>
+									</article>
+									<article class="item">
+										<div class="image fit">
+											<iframe class="image fit" width="420" height="286" src="https://sketchfab.com/models/562b2f2f0dcf4ec3b1ba493190efc51d/embed" frameborder="0" allow="autoplay; fullscreen; vr" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+											<p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">
+											    <a href="https://sketchfab.com/models/562b2f2f0dcf4ec3b1ba493190efc51d?utm_medium=embed&utm_source=website&utm_campaign=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Sulli&#39;s Sofa</a>
+											    by <a href="https://sketchfab.com/Routard?utm_medium=embed&utm_source=website&utm_campaign=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Routard</a>
+											    on <a href="https://sketchfab.com?utm_medium=embed&utm_source=website&utm_campaign=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a>
+											</p>
+										</div>
+										<header>
+											<h3>Sulli's Sofa</h3>
+										</header>
+									</article>
+								</div>
+								<div class="col-4 col-12-mobile">
+									<article class="item">
+										<article class="item">
+											<a href="https://www.artstation.com/artwork/EV9qe2">
+												<div class="image fit" >
+													<img src="images/Min/Screen_M&C.png">
+												</div>
+												<header>
+													<h3>Monsters Inc. Sullivan and Bob's flat</h3>
+												</header>
+											</a>
+										</article>
+										<div class="image fit">
+											<iframe class="image fit" width="420" height="460" src="https://sketchfab.com/models/76447cfb11854cc2b4c2f54aa93d222f/embed" frameborder="0" allow="autoplay; fullscreen; vr" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+											<p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">
+											    <a href="https://sketchfab.com/models/76447cfb11854cc2b4c2f54aa93d222f?utm_medium=embed&utm_source=website&utm_campaign=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">TV</a>
+											    by <a href="https://sketchfab.com/Routard?utm_medium=embed&utm_source=website&utm_campaign=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Routard</a>
+											    on <a href="https://sketchfab.com?utm_medium=embed&utm_source=website&utm_campaign=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a>
+											</p>
+										</div>
+										<header>
+											<h3>TV from the Bob's and Sullivan's Flat</h3>
+										</header>
+									</article>
+									<article class="item">
+										<div class="image fit">
+											<iframe class="image fit" width="420" height="235" src="https://sketchfab.com/models/4f54d6506fec48a6a00ec9c1de899ae6/embed" frameborder="0" allow="autoplay; fullscreen; vr" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+											<p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">
+											    <a href="https://sketchfab.com/models/4f54d6506fec48a6a00ec9c1de899ae6?utm_medium=embed&utm_source=website&utm_campaign=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Speaker from Monsters &amp; Co</a>
+											    by <a href="https://sketchfab.com/Routard?utm_medium=embed&utm_source=website&utm_campaign=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Routard</a>
+											    on <a href="https://sketchfab.com?utm_medium=embed&utm_source=website&utm_campaign=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a>
+											</p>
+										</div>
+										<header>
+											<h3>Speaker from Monsters, Inc</h3>
+										</header>
+									</article>
+								</div>
+								<div class="col-4 col-12-mobile">
+									<article class="item">
+										<article class="item">
+											<a href="https://www.artstation.com/artwork/k4a4Gz">
+												<div class="image fit">
+													<img src="images/Dofus_Auction_House.png">
+												</div>
+												<header>
+													<h3>Fictive Dofus auction house</h3>
+												</header>
+											</a>
+										</article>
+										<div class="image fit">
+											<iframe class="image fit" width="420" height="221" src="https://sketchfab.com/models/75a86390f6224a6d88f00a02f9f1bc63/embed" frameborder="0" allow="autoplay; fullscreen; vr" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+											<p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">
+											    <a href="https://sketchfab.com/models/75a86390f6224a6d88f00a02f9f1bc63?utm_medium=embed&utm_source=website&utm_campaign=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Light</a>
+											    by <a href="https://sketchfab.com/Routard?utm_medium=embed&utm_source=website&utm_campaign=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Routard</a>
+											    on <a href="https://sketchfab.com?utm_medium=embed&utm_source=website&utm_campaign=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a>
+											</p>
+										</div>
+										<header>
+											<h3>Light room</h3>
+										</header>
+									</article>
+									<article class="item">
+										<div class="image fit">
+											<iframe class="image fit" width="420" height="364" src="https://sketchfab.com/models/a51c3c43811e48218bc5389c2532a64e/embed" frameborder="0" allow="autoplay; fullscreen; vr" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+											<p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">
+											    <a href="https://sketchfab.com/models/a51c3c43811e48218bc5389c2532a64e?utm_medium=embed&utm_source=website&utm_campaign=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Phone</a>
+											    by <a href="https://sketchfab.com/Routard?utm_medium=embed&utm_source=website&utm_campaign=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Routard</a>
+											    on <a href="https://sketchfab.com?utm_medium=embed&utm_source=website&utm_campaign=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a>
+											</p>
+										</div>
+										<header>
+											<h3>Dock Phone</h3>
+										</header>
+									</article>
+								</div>
+							</div>
+
+						</div>
+					</section>
+				<!-- About Me -->	
+					<section id="about" class="three">	
+						<header>
+							<h2>About Me</h2>
+							<p style="text-align: justify; padding: 20px;">
+								<b>French with a master degree in Game Management and Game Design (Master MAJIC)</b>. I have a degree in computer science and I was interrested in programming but now, I have discovered 3D graphics and I'm focusing on it. I find it really interresting, the only idea of the limits and horizon of it are incredible and amazing and it's inspiring. About video games, I'm a big player myself. 
+								<br>I love to analyze the different gameplay, to see what's working or not and how it works. I love to see the video game industry evolve and increase in size every year, starting from scratch, as a subculture, disregarded by the majority, to an industry weighing billions of dollars, used all around the globe, and requiring a new field of science to work at its best. 
+								<br>I want to work in video games, from the <b>3D modeling to the animation and integration</b>. I want to create my own objects and maybe even characters. Trough all my years of study I had to work on a various projects so I can make myself fit really fast and well into new groups and work with people. I'm very open-minded and ready to help anyone with any situation.
+							</p>
+							<p style="text-align: left; padding: 20px;">
+								I speak French and English and I'm currently learning Portuguese.<br>
+								As for programming languages, I use Java, C/C++/C#, and none programming one, I use HTML and CSS. 
+							</p>
+						</header>
+						<h3>Software used</h3><br>
+						<div class="row">
+							<div class="col-3 col-6-mobile">
+								<article class="item">
+									<div class="image fit">
+										<a href="https://unity.com/"><img src="images/unity-masterbrand-black.png"></a>
+									</div>
+								</article>
+							</div>
+							<div class="col-3 col-6-mobile">
+								<article class="item">
+									<div class="image fit">
+										<a href="https://www.substance3d.com/products/substance-painter/"><img src="images/Substance_Painter_Logo.png"></a>
+									</div>
+								</article>
+							</div>
+							<div class="col-3 col-6-mobile">
+								<article class="item">
+									<div class="image fit">
+										<a href="https://www.autodesk.fr/products/3ds-max/overview"><img src="images/3dsMax_Logo.png"></a>
+									</div>
+								</article>
+							</div>
+							<div class="col-3 col-6-mobile">
+								<article class="item">
+									<div class="image fit">
+										<a href="https://www.blender.org/"><img src="images/blender_logo_socket.png"></a>
+									</div>
+								</article>
+							</div>
+						</div>
+						<div class="row" style="margin-top: 1em; padding-left: 20%;">
+							<div class="col-3 col-6-mobile">
+								<article class="item">
+									<div class="image fit">
+										<a href="https://www.adobe.com/products/photoshop.html#"><img src="images/Photoshop.png"></a>
+									</div>
+								</article>
+							</div>
+							<div class="col-3 col-6-mobile">
+								<article class="item">
+									<div class="image fit">
+										<a href="https://git-scm.com/"><img src="images/git.png"></a>
+									</div>
+								</article>
+							</div>
+							<div class="col-3 col-6-mobile">
+								<article class="item">
+									<div class="image fit">
+										<a href="https://www.adobe.com/products/illustrator.html#"><img src="images/illustrator.png"></a>
+									</div>
+								</article>
+							</div>
+						</div>
+						<!--<div id="About Me Viedogames">
+							<h2>My Interest</h2>
+							<p> As a gamer myself, I've played a lot of games, even if multiplayer games are univatable, I had big times alone playing solo games. I am a true sci-fi lover and RPGs, so first of all, yes Mass Effect is from far my beloved trilogy games, every year I do start a new journey through this universe and pass hours on the wiki to find new informations about each characters.
+							<br> I've tried as much as I could to discover other worlds through not very known games, and for sure I had suprises. Just like "Stories : The Path of Destinie", a great experience in a personnified world, trying to find the best path through repition of one story, collecting truth (as much as "Erased" the manga). 
+							<br> Of course we won't forget games to play with friends just like Borderlands, and yes, I know, Handsome Jack is one the most well written character over all games.
+							</p>
+						</div>-->
+					</section>
+
+
+				<!-- Contact -->
+					<section id="contact" class="four" >
+						<div class="container_footer" style="margin-top: -1em; margin-bottom: -50px;">
+
+							<h2>Contact</h2>
+
+							<p>You can contact me here, I'm actif on my mails, You have my <a href="images/CV_TOM_Artist_3D-Paris-min.png"> Résumé right here.</a> 
+
+							<form method="post" action="mailto:tom.bonnot@outlook.com" style="padding-left: 100px; padding-right: 100px;">
+								<div class="row" >
+									<div class="col-6 col-12-mobile"><input type="text" name="name" placeholder="Name" /></div>
+									<div class="col-6 col-12-mobile"><input type="text" name="email" placeholder="Email" /></div>
+									<div class="col-12" style="padding-top: 1em; padding-bottom: 1em;">
+										<textarea name="message" placeholder="Message"></textarea>
+									</div>
+									<div class="col-12" style="padding-bottom: 1em;">
+										<input type="submit" value="Send Message" />
+									</div>
+								</div>
+							</form>
+
+						</div>
+					</section>
+
+			</div>
+				<!-- Footer -->
+			<div id="footer">
+
+				<!-- Copyright -->
+					<ul class="copyright" style="height: -50px;">
+						<li> Tom Bonnot.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+
+			</div>
+
+				<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
