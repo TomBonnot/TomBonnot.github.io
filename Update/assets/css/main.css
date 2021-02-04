@@ -222,11 +222,6 @@ input, select, textarea {
 			color: #34a58e !important;
 		}
 
-		#main .thumb:hover{
-			transform: scale(1.1);
-			z-index:+1;
-		}
-
 	strong, b {
 		color: #ffffff;
 		font-weight: 700;
@@ -1211,7 +1206,7 @@ input, select, textarea {
 			display: block;
 			height: 100%;
 			left: 0;
-			position: absolute;
+			position: inherit;
 			top: 0;
 			width: 100%;
 			z-index: 1;
@@ -1634,9 +1629,9 @@ input, select, textarea {
 				background-image: -ms-linear-gradient(to top, rgba(10,17,25,0.35) 5%, rgba(10,17,25,0) 35%);
 				background-image: linear-gradient(to top, rgba(10,17,25,0.35) 5%, rgba(10,17,25,0) 35%);
 				pointer-events: none;
-				background-size: cover;
+				background-size: inherit;
 				content: '';
-				display: block;
+				display: page;
 				height: 100%;
 				left: 0;
 				position: absolute;
