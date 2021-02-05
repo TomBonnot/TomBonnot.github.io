@@ -1183,7 +1183,7 @@ input, select, textarea {
 
 /* Poptrox Popup */
 
-	.poptrox-overlay {
+/*	.poptrox-overlay {
 		-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 	}
 
@@ -1360,7 +1360,7 @@ input, select, textarea {
 			}
 
 		}
-
+*/
 /* Wrapper */
 
 	#wrapper {
@@ -2045,6 +2045,14 @@ input, select, textarea {
 				}
 
 		}
+/* In thumb */
+
+	article#in_thumb{
+		background-color: #1f2937;
+		width: 50%;
+		height: 90%;
+		display : inline-block;
+	}
 
 /* Footer */
 
