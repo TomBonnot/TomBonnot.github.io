@@ -1379,7 +1379,7 @@ input, select, textarea {
 		-ms-transition: -moz-filter 0.5s ease, -webkit-filter 0.5s ease, -ms-filter 0.5s ease, -ms-filter 0.5s ease;
 		transition: -moz-filter 0.5s ease, -webkit-filter 0.5s ease, -ms-filter 0.5s ease, filter 0.5s ease;
 		position: relative;
-		background-image: url("./images/screen_2.png");
+		background-image: url("./images/screen_2-min.png");
 		background-repeat: no-repeat; 
 		background-color: #1f2937;
 		background-attachment: fixed;
