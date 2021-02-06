@@ -188,6 +188,10 @@ input, select, textarea {
 			transition: none !important;
 		}
 
+		body.modal-active{
+			overflow: hidden;
+		}
+
 /* Type */
 
 	body, input, select, textarea {
@@ -1183,14 +1187,16 @@ input, select, textarea {
 
 /* Poptrox Popup */
 
-/*	.poptrox-overlay {
+	.poptrox-overlay {
 		-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+		overflow-y: auto;
 	}
 
 	.poptrox-popup {
-		background: rgba(31, 34, 36, 0.925);
+		background: rgba(31, 34, 36, 0.825);
 		box-shadow: 0 1em 3em 0.5em rgba(0, 0, 0, 0.25);
 		cursor: default;
+		width: 50%;
 	}
 
 		.poptrox-popup:before {
@@ -1230,7 +1236,7 @@ input, select, textarea {
 			width: 5em;
 			z-index: 2;
 		}
-
+/*
 		.poptrox-popup .nav-previous,
 		.poptrox-popup .nav-next {
 			-moz-transition: opacity 0.2s ease-in-out;
@@ -1250,7 +1256,7 @@ input, select, textarea {
 			width: 6em;
 			z-index: 2;
 		}
-
+/*
 		.poptrox-popup .nav-previous {
 			-moz-transform: scaleX(-1);
 			-webkit-transform: scaleX(-1);
@@ -1262,7 +1268,7 @@ input, select, textarea {
 		.poptrox-popup .nav-next {
 			right: 0;
 		}
-
+/*
 		.poptrox-popup .caption {
 			padding: 2em 2em 0.1em 2em ;
 			background-image: -moz-linear-gradient(to top, rgba(16,16,16,0.45) 25%, rgba(16,16,16,0) 100%);
@@ -1276,6 +1282,10 @@ input, select, textarea {
 			text-align: left;
 			width: 100%;
 			z-index: 2;
+		}
+*/
+		.poptrox-popup .caption {
+			display: inline-block;
 		}
 
 			.poptrox-popup .caption h2, .poptrox-popup .caption h3, .poptrox-popup .caption h4, .poptrox-popup .caption h5, .poptrox-popup .caption h6 {
@@ -1307,6 +1317,7 @@ input, select, textarea {
 			top: 50%;
 			width: 2em;
 		}
+
 
 		.poptrox-popup:hover .closer,
 		.poptrox-popup:hover .nav-previous,
@@ -1360,7 +1371,6 @@ input, select, textarea {
 			}
 
 		}
-*/
 /* Wrapper */
 
 	#wrapper {
@@ -1617,6 +1627,7 @@ input, select, textarea {
 			opacity: 1;
 			overflow: hidden;
 			position: relative;
+			background-color: rgba(31, 41, 55, 0.4);
 		}
 
 			#main .thumb:hover {
@@ -2047,11 +2058,11 @@ input, select, textarea {
 		}
 /* In thumb */
 
-	article#in_thumb{
-		background-color: #1f2937;
-		width: 50%;
-		height: 90%;
-		display : inline-block;
+	p#in_thumb{
+		width: 55%; 
+		align-content: center; 
+		display: inline-block; 
+		text-align: left; 
 	}
 
 /* Footer */
