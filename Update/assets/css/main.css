@@ -1207,7 +1207,16 @@ input, select, textarea {
 		background: rgba(31, 34, 36, 0.825);
 		box-shadow: 0 1em 3em 0.5em rgba(0, 0, 0, 0.25);
 		cursor: default;
-		width: 50%;
+		width: min-content;
+	}
+
+	@media screen and (max-width: 980px) {
+		.poptrox-popup {
+			background: rgba(31, 34, 36, 0.825);
+			box-shadow: 0 1em 3em 0.5em rgba(0, 0, 0, 0.25);
+			cursor: default;
+			width: 90%;
+		}
 	}
 
 		.poptrox-popup:before {
@@ -1225,7 +1234,7 @@ input, select, textarea {
 			left: 0;
 			position: inherit;
 			top: 0;
-			width: 100%;
+			width: min-content;
 			z-index: 1;
 			opacity: 1;
 		}
@@ -1640,6 +1649,7 @@ input, select, textarea {
 			opacity: 1;
 			overflow: hidden;
 			position: relative;
+			width: min-content;
 			background-color: rgba(31, 41, 55, 0.4);
 		}
 
@@ -1672,6 +1682,7 @@ input, select, textarea {
 				height: 100%;
 				left: 0;
 				position: absolute;
+				vertical-align: middle;
 				top: 0;
 				width: 100%;
 			}
@@ -2050,6 +2061,7 @@ input, select, textarea {
 				height: calc(40vh - 2em);
 				min-height: 18em;
 				width: 100%;
+				display: center;
 			}
 
 				#main .thumb:nth-child(1) {
@@ -2073,15 +2085,32 @@ input, select, textarea {
 					transition-delay: 0.95s;
 				}
 
+				#main .thumb > img {
+					vertical-align: left;
+					display: inline-block;
+				}
+
 		}
 /* In thumb */
 
 	p#in_thumb{
-		width: 55%; 
+		width: 90%; 
 		align-content: center; 
 		display: inline-block; 
-		text-align: left;
 		vertical-align: center;
+	}
+
+		p#in_thumb > img{
+			padding-bottom: 1em; 
+		}
+
+	@media screen and (max-width: 980px) {
+
+		p#in_thumb > img{
+			width: 100%;
+			vertical-align: middle;
+		}
+
 	}
 
 /* Footer */
