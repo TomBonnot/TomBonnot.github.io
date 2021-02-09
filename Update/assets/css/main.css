@@ -1203,7 +1203,7 @@ input, select, textarea {
 		background: rgba(31, 34, 36, 0.825);
 		box-shadow: 0 1em 3em 0.5em rgba(0, 0, 0, 0.25);
 		cursor: default;
-		width: min-content;
+		width: min-content !important;
 	}
 
 	@media screen and (max-width: 980px) {
@@ -1229,7 +1229,6 @@ input, select, textarea {
 			left: 0;
 			position: inherit;
 			top: 0;
-			width: min-content;
 			z-index: 1;
 			opacity: 1;
 		}
@@ -1301,7 +1300,6 @@ input, select, textarea {
 */
 		.poptrox-popup .caption {
 			display: inline-block;
-			width: min-content;
 		}
 
 			.poptrox-popup .caption h2, .poptrox-popup .caption h3, .poptrox-popup .caption h4, .poptrox-popup .caption h5, .poptrox-popup .caption h6 {
@@ -1379,13 +1377,6 @@ input, select, textarea {
 			.poptrox-popup .caption {
 				overflow-y: auto;
 			}
-
-			.poptrox-popup .closer,
-			.poptrox-popup .nav-previous,
-			.poptrox-popup .nav-next {
-
-			}
-
 		}
 /* Wrapper */
 
@@ -1583,10 +1574,6 @@ input, select, textarea {
 						}
 
 	@media screen and (max-width: 736px) {
-
-		body {
-
-		}
 
 		#header {
 			-moz-transform: translateY(0);
@@ -2085,26 +2072,14 @@ input, select, textarea {
 /* In thumb */
 
 	p#in_thumb{ 
-		align-content: center; 
 		display: inline-block; 
-<<<<<<< HEAD
-		vertical-align: center;
-=======
 		text-align: left; 
->>>>>>> parent of b03f9f9... commit to save
+		width: 90%;
 	}
 
 		p#in_thumb > img{
 			padding-bottom: 1em; 
 		}
-/*
-	@media screen and (max-width: 980px) {
-
-		p#in_thumb > img{
-			vertical-align: middle;
-		}
-
-	}
 
 /* Footer */
 
