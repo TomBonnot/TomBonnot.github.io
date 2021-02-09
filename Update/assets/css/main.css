@@ -1697,11 +1697,6 @@ input, select, textarea {
 				display: none;
 			}
 
-			#main .thumb > img {
-				vertical-align: center;
-				display: inline-block;
-			}
-
 		#main:after {
 			pointer-events: none;
 			-moz-transition: opacity 0.5s ease, visibility 0.5s;
@@ -2092,7 +2087,11 @@ input, select, textarea {
 	p#in_thumb{ 
 		align-content: center; 
 		display: inline-block; 
+<<<<<<< HEAD
 		vertical-align: center;
+=======
+		text-align: left; 
+>>>>>>> parent of b03f9f9... commit to save
 	}
 
 		p#in_thumb > img{
