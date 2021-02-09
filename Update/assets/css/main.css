@@ -1310,6 +1310,11 @@ input, select, textarea {
 				color: #ffffff;
 			}
 
+			.poptrox-popup .caption > img {
+				padding-bottom: 2%;
+				width: 60%;
+			}
+
 		.poptrox-popup .loader {
 			-moz-animation: spinner 1s infinite linear !important;
 			-webkit-animation: spinner 1s infinite linear !important;
@@ -1366,12 +1371,22 @@ input, select, textarea {
 				background-size: 4em;
 			}
 
+			.poptrox-popup .caption > img {
+				padding-bottom: 2%;
+				width: 80%;
+			}
+
 		}
 
 		@media screen and (max-width: 736px) {
 
 			.poptrox-popup:before {
 				display: none;
+			}
+
+			.poptrox-popup .caption > img {
+				padding-bottom: 2%;
+				width: 90%;
 			}
 
 			.poptrox-popup .caption {
@@ -2069,17 +2084,14 @@ input, select, textarea {
 				}
 
 		}
+
 /* In thumb */
 
 	p#in_thumb{ 
 		display: inline-block; 
-		text-align: left; 
+		text-align: justify; 
 		width: 90%;
 	}
-
-		p#in_thumb > img{
-			padding-bottom: 1em; 
-		}
 
 /* Footer */
 
