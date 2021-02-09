@@ -188,11 +188,7 @@ input, select, textarea {
 			transition: none !important;
 		}
 
-		body.modal-active{
-			overflow: hidden;
-		}
-
-		body.content-active{
+		body.modal-active , body.content-active{
 			overflow: hidden;
 		}
 
@@ -1215,7 +1211,6 @@ input, select, textarea {
 			background: rgba(31, 34, 36, 0.825);
 			box-shadow: 0 1em 3em 0.5em rgba(0, 0, 0, 0.25);
 			cursor: default;
-			width: 90%;
 		}
 	}
 
@@ -1306,6 +1301,7 @@ input, select, textarea {
 */
 		.poptrox-popup .caption {
 			display: inline-block;
+			width: min-content;
 		}
 
 			.poptrox-popup .caption h2, .poptrox-popup .caption h3, .poptrox-popup .caption h4, .poptrox-popup .caption h5, .poptrox-popup .caption h6 {
@@ -2093,8 +2089,7 @@ input, select, textarea {
 		}
 /* In thumb */
 
-	p#in_thumb{
-		width: 90%; 
+	p#in_thumb{ 
 		align-content: center; 
 		display: inline-block; 
 		vertical-align: center;
@@ -2103,11 +2098,10 @@ input, select, textarea {
 		p#in_thumb > img{
 			padding-bottom: 1em; 
 		}
-
+/*
 	@media screen and (max-width: 980px) {
 
 		p#in_thumb > img{
-			width: 100%;
 			vertical-align: middle;
 		}
 
