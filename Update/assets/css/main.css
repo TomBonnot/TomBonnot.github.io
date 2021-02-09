@@ -1310,7 +1310,7 @@ input, select, textarea {
 				color: #ffffff;
 			}
 
-			.poptrox-popup .caption > img {
+			.poptrox-popup .caption > img , iframe {
 				padding-bottom: 2%;
 				width: 60%;
 			}
