@@ -1366,32 +1366,31 @@ input, select, textarea {
 				background-size: 3em;
 			}
 
-			.poptrox-popup .nav-previous,
-			.poptrox-popup .nav-next {
-				background-size: 4em;
-			}
-
 			.poptrox-popup .caption > img {
 				padding-bottom: 2%;
-				overflow-y: auto;
 				width: 80%;
+			}
+
+			.poptrox-overlay{
+				overflow-y: scroll; 
+				-webkit-overflow-scrolling: touch;
 			}
 
 		}
 
 		@media screen and (max-width: 736px) {
 
-			.poptrox-popup:before {
-				display: none;
-			}
-
 			.poptrox-popup .caption > img {
 				padding-bottom: 2%;
 				width: 90%;
 			}
 
-			.poptrox-popup .caption {
-				overflow-y: auto;
+			.poptrox-popup .closer {
+				background-size: 2em;
+			}
+
+			.poptrox-overlay {
+				overflow-x: hidden; overflow-y: scroll; -webkit-overflow-scrolling: touch;
 			}
 		}
 /* Wrapper */
@@ -1406,6 +1405,7 @@ input, select, textarea {
 		background-repeat: no-repeat; 
 		background-color: #1f2937;
 		background-attachment: fixed;
+		background-size: cover;
 	}
 
 		#wrapper:after {
