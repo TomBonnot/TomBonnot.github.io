@@ -1,5 +1,5 @@
 @import url(fontawesome-all.min.css);
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,400italic");
+@import url("https://fonts.googleapis.com/css?family=Exo:light300,light300italic,semi-bold600|Noto+Sans:Regular400,Bold700,Regular400italic|Permanent+Marker:bold|Source+Sans+Pro:300,300italic,400,400italic");
 
 /*
 	Multiverse by HTML5 UP
@@ -1390,7 +1390,8 @@ input, select, textarea {
 			}
 
 			.poptrox-overlay {
-				overflow-x: hidden; overflow-y: scroll; -webkit-overflow-scrolling: touch;
+				overflow-x: hidden; overflow-y: auto; -webkit-overflow-scrolling: touch;
+				height: auto;
 			}
 		}
 /* Wrapper */
