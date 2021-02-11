@@ -1493,10 +1493,6 @@ input, select, textarea {
 
 /* Header */
 
-	body {
-
-	}
-
 	#header {
 		-moz-transform: translateY(0);
 		-webkit-transform: translateY(0);
