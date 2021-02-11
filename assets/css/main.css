@@ -1,5 +1,5 @@
 @import url(fontawesome-all.min.css);
-@import url("https://fonts.googleapis.com/css?family=Exo:light300,light300italic,semi-bold600|Noto+Sans:Regular400,Bold700,Regular400italic|Permanent+Marker:bold|Source+Sans+Pro:300,300italic,400,400italic");
+@import url("https://fonts.googleapis.com/css?family=Exo:light300,light300italic,semi-bold600|Noto+Sans:Regular400,Bold700,Regular400italic|Permanent+Marker:Regular400|Source+Sans+Pro:300,300italic,400,400italic");
 
 /*
 	Multiverse by HTML5 UP
@@ -1645,6 +1645,7 @@ input, select, textarea {
 		-ms-flex-wrap: wrap;
 		flex-wrap: wrap;
 		-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+		padding-bottom: 4em;
 	}
 
 		#main .thumb {
