@@ -1193,6 +1193,7 @@ input, select, textarea {
 	.poptrox-overlay {
 		-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 		overflow-y: auto;
+		-webkit-overflow-scrolling: touch;
 	}
 
 	.poptrox-popup {
@@ -1366,18 +1367,13 @@ input, select, textarea {
 
 			.poptrox-popup .closer {
 				background-size: 3em;
+				opacity: 1.0 !important;
 			}
 
 			.poptrox-popup .caption > img {
 				padding-bottom: 2%;
 				width: 80%;
 			}
-
-			.poptrox-overlay{
-				overflow-y: scroll; 
-				-webkit-overflow-scrolling: touch;
-			}
-
 		}
 
 		@media screen and (max-width: 736px) {
@@ -1389,11 +1385,7 @@ input, select, textarea {
 
 			.poptrox-popup .closer {
 				background-size: 2em;
-			}
-
-			.poptrox-overlay {
-				overflow-x: hidden; overflow-y: auto; -webkit-overflow-scrolling: touch;
-				height: auto;
+				opacity: 1.0 !important;
 			}
 		}
 /* Wrapper */
