@@ -1193,7 +1193,6 @@ input, select, textarea {
 	.poptrox-overlay {
 		-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 		overflow-y: auto;
-		-webkit-overflow-scrolling: touch;
 	}
 
 	.poptrox-popup {
