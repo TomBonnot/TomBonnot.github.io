@@ -423,7 +423,7 @@ input, select, textarea {
 				background-color: rgba(52, 165, 142, 0.15);
 				color: #34a58e !important;
 			}
-
+/**
 		input[type="submit"].icon,
 		input[type="reset"].icon,
 		input[type="button"].icon,
@@ -439,7 +439,7 @@ input, select, textarea {
 			.button.icon:before {
 				margin-right: 0.5em;
 			}
-
+*/
 		input[type="submit"].fit,
 		input[type="reset"].fit,
 		input[type="button"].fit,
