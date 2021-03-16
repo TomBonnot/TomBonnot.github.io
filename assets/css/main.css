@@ -439,7 +439,7 @@ input, select, textarea {
 			.button.icon:before {
 				margin-right: 0.5em;
 			}
-*/
+**/
 		input[type="submit"].fit,
 		input[type="reset"].fit,
 		input[type="button"].fit,
@@ -760,7 +760,7 @@ input, select, textarea {
 		opacity: 1.0;
 	}
 
-/* Icon */
+/* Icon 
 
 	.icon {
 		text-decoration: none;
@@ -959,7 +959,7 @@ input, select, textarea {
 					ul.actions:not(.fixed) li .button {
 						width: 100%;
 					}
-
+/*
 						ul.actions:not(.fixed) li input[type="submit"].icon:before,
 						ul.actions:not(.fixed) li input[type="reset"].icon:before,
 						ul.actions:not(.fixed) li input[type="button"].icon:before,
@@ -970,7 +970,7 @@ input, select, textarea {
 
 		}
 
-/* Icons */
+/* Icons
 
 	ul.icons {
 		cursor: default;
