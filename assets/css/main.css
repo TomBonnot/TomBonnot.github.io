@@ -337,7 +337,6 @@ input, select, textarea {
 	}
 
 	pre {
-		-webkit-overflow-scrolling: touch;
 		font-family: "Courier New", monospace;
 		font-size: 0.9em;
 		margin: 0 0 2em 0;
@@ -994,7 +993,7 @@ input, select, textarea {
 /* Table */
 
 	.table-wrapper {
-		-webkit-overflow-scrolling: touch;
+		
 		overflow-x: auto;
 	}
 
@@ -1071,7 +1070,7 @@ input, select, textarea {
 		-webkit-transition: -webkit-transform 0.5s ease;
 		-ms-transition: -ms-transform 0.5s ease;
 		transition: transform 0.5s ease;
-		-webkit-overflow-scrolling: touch;
+		
 		background: rgba(31, 41, 55, 0.95);
 		bottom: 4em;
 		left: 0;
@@ -1192,7 +1191,6 @@ input, select, textarea {
 
 	.poptrox-overlay {
 		-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
-		overflow-y: auto;
 	}
 
 	.poptrox-popup {
