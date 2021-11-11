@@ -93,6 +93,10 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
 
+footer{
+	position: fixed;
+}
+
 body {
 	line-height: 1;
 }
@@ -1191,6 +1195,7 @@ input, select, textarea {
 
 	.poptrox-overlay {
 		-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+		overflow-y: auto;
 	}
 
 	.poptrox-popup {
@@ -1355,6 +1360,10 @@ input, select, textarea {
 			.poptrox-popup .caption > img {
 				padding-bottom: 2%;
 				width: 80%;
+			}
+
+			.poptrox-overlay{
+				-webkit-overflow-scrolling: touch;
 			}
 		}
 
