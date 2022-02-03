@@ -1637,7 +1637,7 @@ input, select, textarea {
 			overflow: hidden;
 			position: relative;
 			width: min-content;
-			background-color: rgba(31, 41, 55, 0.4);
+			background-color: rgba(0, 0, 0, 1);
 		}
 
 			#main .thumb:hover {
