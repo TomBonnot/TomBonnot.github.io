@@ -1,5 +1,5 @@
 @import url(fontawesome-all.min.css);
-@import url("https://fonts.googleapis.com/css?family=Exo:light300,light300italic,semi-bold600|Noto+Sans:Regular400,Bold700,Regular400italic|Permanent+Marker:Regular400|Source+Sans+Pro:300,300italic,400,400italic|Bevan:Regular400|Lato:Regular400|Press+Start+2P:Regular400");
+@import url("https://fonts.googleapis.com/css?family=Exo:light300,light300italic,semi-bold600|Noto+Sans:Regular400,Bold700,Regular400italic|Permanent+Marker:Regular400|Source+Sans+Pro:300,300italic,400,400italic|Bevan:Regular400|Lato:Regular400|Press+Start+2P:Regular400|Cinzel:Medium500|Roboto:Regular400");
 
 /*
 	Multiverse by HTML5 UP
@@ -7,7 +7,7 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-@-moz-keyframes spinner {           
+@-moz-keyframes spinner {
 	0% {
 		-moz-transform: rotate(0deg);
 		-webkit-transform: rotate(0deg);
@@ -997,7 +997,7 @@ input, select, textarea {
 /* Table */
 
 	.table-wrapper {
-		
+
 		overflow-x: auto;
 	}
 
@@ -1074,7 +1074,7 @@ input, select, textarea {
 		-webkit-transition: -webkit-transform 0.5s ease;
 		-ms-transition: -ms-transform 0.5s ease;
 		transition: transform 0.5s ease;
-		
+
 		background: rgba(31, 41, 55, 0.95);
 		bottom: 4em;
 		left: 0;
@@ -1388,7 +1388,7 @@ input, select, textarea {
 		transition: -moz-filter 0.5s ease, -webkit-filter 0.5s ease, -ms-filter 0.5s ease, filter 0.5s ease;
 		position: relative;
 		background-image: url("./images/screen_2.png");
-		background-repeat: no-repeat; 
+		background-repeat: no-repeat;
 		background-color: #1f2937;
 		background-attachment: fixed;
 		background-size: cover;
@@ -2076,9 +2076,9 @@ input, select, textarea {
 
 /* In thumb */
 
-	p#in_thumb{ 
-		display: inline-block; 
-		text-align: justify; 
+	p#in_thumb{
+		display: inline-block;
+		text-align: justify;
 		width: 90%;
 	}
 
