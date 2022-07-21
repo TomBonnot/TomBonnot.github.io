@@ -2098,8 +2098,9 @@ input, select, textarea {
 
 	@media screen and (max-width: 480px){
 		.sketchfab-embed-wrapper {
-			width: 400px;
-			height: 250px;
+			width: 350px;
+			height: 200px;
+			display: center;
 		}
 	}
 
