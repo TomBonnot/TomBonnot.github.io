@@ -2089,16 +2089,16 @@ input, select, textarea {
 		height: 350px;
 	}
 
-	@media screen and (max-width: 480px){
-		.sketchfab-embed-wrapper {
-			width: 350px;
-			height: 150px;
-		}
-	}
-
 	@media screen and (max-width: 900px){
 		.sketchfab-embed-wrapper {
 			width: 500px;
+			height: 250px;
+		}
+	}
+
+	@media screen and (max-width: 480px){
+		.sketchfab-embed-wrapper {
+			width: 400px;
 			height: 250px;
 		}
 	}
