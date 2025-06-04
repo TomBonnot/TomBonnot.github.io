@@ -39,37 +39,55 @@
 		}
 
 		nav {
-			position: fixed;
 			top: 0;
 			left: 0;
 			width: 200px;
 			height: 100%;
-			background: transparent;
 			color: #fff;
-			padding-top: 2rem;
+			background-color: #fff;
 			display: flex;
 			flex-direction: column;
-			overflow-y: auto;
+			overflow: visible;
+			position: relative;
 			transition: transform 0.3s ease;
 			z-index: 999;
 		}
 
 		nav a {
 			width: 100%;
-			height: 100px;
+			height: 9.1vh;
 			display: block;
-			overflow: hidden;
+			transition: transform 0.3s ease;
+			position: relative;
+			z-index: 1;
+		}
+
+		nav a img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			display: block;
 			transition: transform 0.3s ease;
 		}
 
 		nav a:hover {
 			background: #444;
+			z-index: 10;
 			transition: transform 0.3s ease;
-			transform: scale(1.25);
+			transform: scale(1.25) translateX(10px);
+		}
+
+		nav a.active {
+			transform: scale(1.1) translateX(5px);
+			z-index: 5;
+		}
+		
+		nav a.active:hover {
+			transform: scale(1.25) translateX(10px);
+			z-index: 10;
 		}
 
 		.content {
-			margin-left: 200px;
 			width: calc(100% - 200px);
 			height: 100vh;
 			overflow-y: scroll;
@@ -85,7 +103,7 @@
 			justify-content: center;
 			align-items: center;
 			background: #fff;
-			border-bottom: 1px solid #ddd;
+			border-bottom: #fff;
 			scroll-behavior: smooth;
 		}
 
@@ -123,14 +141,6 @@
 			}
 		}
 
-		nav a img {
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
-			display: block;
-			transition: transform 0.3s ease;
-		}
-
 		#menu-toggle.active {
 			transform: scale(1.2);
 		}
@@ -139,23 +149,29 @@
 			transform: scale(1.2);
 			transition: transform 0.2s ease;
 		}
+		
+		section img {
+			width: 30%;
+		}
 
 	</style>
 </head>
 	<body>
 		<button class="menu-toggle" onclick="document.querySelector('nav').classList.toggle('open')">Menu</button>
 		<nav>
-			<a href="#accueil">Accueil</a>
-			<a href="#contact">Contact</a>
-			<a href="#projet1"><img src="images/thumbs/min/Pirate_Chips.png" alt="Pirate Chips"></a>
-			<a href="#projet2"><img src="images/thumbs/min/03-min.png" alt="Poulpoutou"></a>
-			<a href="#projet3"><img src="images/thumbs/min/Eau'Scours.png" alt="Eau'Scours"></a>
-			<a href="#projet4"><img src="images/thumbs/min/Backstage.png" alt="Backstage"></a>
-			<a href="#projet5"><img src="images/thumbs/min/Color_Quest.png" alt="Color-Quest"></a>
-			<a href="#projet6"><img src="images/thumbs/min/01-min.png" alt="SAGE"></a>
-			<a href="#projet7"><img src="images/thumbs/min/Gang_Graine.png" alt="Gang Graine"></a>
-			<a href="#projet8"><img src="images/thumbs/min/wisp.png" alt="Wisp"></a>
-			<a href="#projet9"><img src="images/thumbs/min/DiceAgainst.png" alt="Dice"></a>
+			<div class="nav-scroll">
+				<a href="#accueil">Accueil</a>
+				<a href="#contact">Contact</a>
+				<a href="#projet1"><img src="images/thumbs/min/Pirate_Chips.png" alt="Pirate Chips"></a>
+				<a href="#projet2"><img src="images/thumbs/min/03-min.png" alt="Poulpoutou"></a>
+				<a href="#projet3"><img src="images/thumbs/min/Eau'Scours.png" alt="Eau'Scours"></a>
+				<a href="#projet4"><img src="images/thumbs/min/Backstage.png" alt="Backstage"></a>
+				<a href="#projet5"><img src="images/thumbs/min/Color_Quest.png" alt="Color-Quest"></a>
+				<a href="#projet6"><img src="images/thumbs/min/01-min.png" alt="SAGE"></a>
+				<a href="#projet7"><img src="images/thumbs/min/Gang_Graine.png" alt="Gang Graine"></a>
+				<a href="#projet8"><img src="images/thumbs/min/wisp.png" alt="Wisp"></a>
+				<a href="#projet9"><img src="images/thumbs/min/DiceAgainst.png" alt="Dice"></a>
+			</div>
 		</nav>
 		<div class="content">
 			<section id="accueil">
@@ -165,12 +181,40 @@
 
 			<section id="contact">
 				<h2>Contact</h2>
-				<embed src="Tom_Bonnot_CV.pdf" type="application/pdf" width="90%" height="100%" />
 			</section>
 		
 			<section id="projet1">
-				<h2>Projet 1</h2>
-				<p>Description complète du projet 1 ici.</p>
+				<h2>Pirate Chips</h2>
+				<img src="images/thumbs/PC-01.png">
+				<p>
+					Soyez le plus patate des moussaillons et prenez part à cette bataille sans foi ni loi !<br>
+					<br>
+					Formez des équipes, enfilez votre chapeau de pirate, construisez votre navire, <br>
+					puis lancez-vous en mer, tout est permis : tirez au canon, donnez des coups de pagaie, <br>
+					sautez sur le bateau ennemi pour le saboter ou naviguez à pleine vitesse pour l’enfoncer, <br>
+					réparez ou reconstruisez votre bateau en pleine bataille, la liste est longue. Rien n’est figé, <br>
+					tout peut être détruit… ou amélioré !<br>
+					<br>
+					Un seul objectif : être le dernier des tubercules à flot.<br>
+					<br>
+					Embarquez dans ce Couch Game délirant, et ce, dès les premières images, <br>
+					n'attendez pas de lancer une partie pour régler les comptes, c'est ce que font les vrais pirates yar !<br>
+					<br>
+					Prêt à jouer avec vos propres règles ?<br>
+					<br>
+					Projet réalisé en quatre mois pour le DESS en Design de jeu à l’Université de Montréal<br>
+					Tous : Designer de jeu<br>
+					William Bourassa Bennett : Développeur<br>
+					Justin Carrier : Développeur Rami Serhal : Designer de niveau, designer de son<br>
+					Tom Bonnot : Chef de projet, artiste de jeu 3D<br>
+					<br>
+					Merci aux externes qui ont aidé sur le projet :<br>
+					Hélène Litzler : UI en jeu<br>
+					Lauriane Paty : Artiste de jeu 3D<br>
+					Léonard Ponthieu : Artiste VFX<br>
+					Jean-François Kharrat : Animateur 3D<br>
+					Zoé Martinez Salas : Compositeur
+				</p>
 				<a href="#accueil" class="back-to-top">Retour en haut</a>
 			</section>
 		
