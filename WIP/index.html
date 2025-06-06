@@ -68,7 +68,7 @@
 
 		.sidebar a {
 			display: block;
-			height: calc(100%/10);
+			height: calc(100%/9);
 			overflow: visible;
 			transition: all 0.3s ease;
 		}
@@ -82,11 +82,13 @@
 
 		.sidebar a:hover img {
 			transform: scale(1.10) translateX(5px);
+			box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
 			border-radius: 5px;
 			z-index: 10;
 		}
 		.sidebar a.active img {
 			transform: scale(1.25) translateX(10px);
+			box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
 			border-radius: 5px;
 			z-index: 10;
 		}
@@ -212,12 +214,11 @@
 
 <nav class="sidebar d-flex flex-column" id="sidebar">
 	<button class="menu-toggle fa-solid fa-bars " id="toggleSidebar"></button>
-	<a href="#accueil"><img src="../images/thumbs/min/PhotoTom.webp" alt="Accueil"></a>
-	<a href="#contact">Contact</a>
+	<a href="#accueil"><img src="../images/thumbs/min/PhotoTom_Inverse.webp" style="left: 1rem;" alt="Accueil"></a>
 	<a href="#projet1"><img src="../images/thumbs/min/Pirate_Chips.webp" alt="Pirate Chips"></a>
 	<a href="#projet2"><img src="../images/thumbs/min/03-min.webp" alt="Poulpoutou"></a>
 	<a href="#projet3"><img src="../images/thumbs/min/EauScours.webp" alt="Eau'Scours"></a>
-	<a href="#projet4"><img src="../images/thumbs/min/Backstage.webp" alt="Backstage"></a>
+	<a href="#projet4"><img src="../images/thumbs/min/Backstage_cut.webp" alt="Backstage"></a>
 	<a href="#projet5"><img src="../images/thumbs/min/Color_Quest.webp" alt="Color Quest"></a>
 	<a href="#projet6"><img src="../images/thumbs/min/01-min.webp" alt="SAGE"></a>
 	<a href="#projet7"><img src="../images/thumbs/min/Gang_Graine.webp" alt="Gang Graine"></a>
