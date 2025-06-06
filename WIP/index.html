@@ -4,6 +4,7 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<title>Mon Portfolio</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 	<style>
 		html, body {
@@ -101,6 +102,12 @@
 			color: #007BFF;
 		}
 
+		@media (min-width: 769px) {
+			.menu-toggle {
+				display: none;
+			}
+		}
+
 		@media (max-width: 768px) {
 			.sidebar {
 				transform: translateX(-100%);
@@ -116,14 +123,20 @@
 			}
 
 			.menu-toggle {
+				color: inherit;
 				position: fixed;
-				top: 1rem;
-				left: 1rem;
+				left: 15rem;
 				z-index: 1040;
-				background: #222;
-				color: white;
-				padding: 0.5rem 1rem;
+				background: transparent;
+				font-size: 2rem;
+				padding-top: 1.7rem;
 				border: none;
+				transition: transform 0.1s ease, opacity 0.3s ease;
+			}
+
+			.menu-toggle.fade-out {
+				opacity: 0;
+				transform: rotate(90deg);
 			}
 			
 			.img-section {
@@ -136,13 +149,50 @@
 				font-size: smaller;
 			}
 		}
+
+		#theme-toggle {
+			position: fixed;
+			top: 1rem;
+			right: 1rem;
+			background: none;
+			border: none;
+			cursor: pointer;
+			z-index: 1050;
+			transition: transform 0.3s ease;
+		}
+
+		#theme-toggle:hover {
+			transform: scale(1.2);
+		}
+
+		body.day {
+			background-color: #ffffff;
+			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2000 1500'%3E%3Cdefs%3E%3Crect stroke='%23ffffff' stroke-width='.5' width='1' height='1' id='s'/%3E%3Cpattern id='a' width='3' height='3' patternUnits='userSpaceOnUse' patternTransform='scale(50) translate(-980 -735)'%3E%3Cuse fill='%23fcfcfc' href='%23s' y='2'/%3E%3Cuse fill='%23fcfcfc' href='%23s' x='1' y='2'/%3E%3Cuse fill='%23fafafa' href='%23s' x='2' y='2'/%3E%3Cuse fill='%23fafafa' href='%23s'/%3E%3Cuse fill='%23f7f7f7' href='%23s' x='2'/%3E%3Cuse fill='%23f7f7f7' href='%23s' x='1' y='1'/%3E%3C/pattern%3E%3Cpattern id='b' width='7' height='11' patternUnits='userSpaceOnUse' patternTransform='scale(50) translate(-980 -735)'%3E%3Cg fill='%23f5f5f5'%3E%3Cuse href='%23s'/%3E%3Cuse href='%23s' y='5' /%3E%3Cuse href='%23s' x='1' y='10'/%3E%3Cuse href='%23s' x='2' y='1'/%3E%3Cuse href='%23s' x='2' y='4'/%3E%3Cuse href='%23s' x='3' y='8'/%3E%3Cuse href='%23s' x='4' y='3'/%3E%3Cuse href='%23s' x='4' y='7'/%3E%3Cuse href='%23s' x='5' y='2'/%3E%3Cuse href='%23s' x='5' y='6'/%3E%3Cuse href='%23s' x='6' y='9'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='h' width='5' height='13' patternUnits='userSpaceOnUse' patternTransform='scale(50) translate(-980 -735)'%3E%3Cg fill='%23f5f5f5'%3E%3Cuse href='%23s' y='5'/%3E%3Cuse href='%23s' y='8'/%3E%3Cuse href='%23s' x='1' y='1'/%3E%3Cuse href='%23s' x='1' y='9'/%3E%3Cuse href='%23s' x='1' y='12'/%3E%3Cuse href='%23s' x='2'/%3E%3Cuse href='%23s' x='2' y='4'/%3E%3Cuse href='%23s' x='3' y='2'/%3E%3Cuse href='%23s' x='3' y='6'/%3E%3Cuse href='%23s' x='3' y='11'/%3E%3Cuse href='%23s' x='4' y='3'/%3E%3Cuse href='%23s' x='4' y='7'/%3E%3Cuse href='%23s' x='4' y='10'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='c' width='17' height='13' patternUnits='userSpaceOnUse' patternTransform='scale(50) translate(-980 -735)'%3E%3Cg fill='%23f2f2f2'%3E%3Cuse href='%23s' y='11'/%3E%3Cuse href='%23s' x='2' y='9'/%3E%3Cuse href='%23s' x='5' y='12'/%3E%3Cuse href='%23s' x='9' y='4'/%3E%3Cuse href='%23s' x='12' y='1'/%3E%3Cuse href='%23s' x='16' y='6'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='d' width='19' height='17' patternUnits='userSpaceOnUse' patternTransform='scale(50) translate(-980 -735)'%3E%3Cg fill='%23ffffff'%3E%3Cuse href='%23s' y='9'/%3E%3Cuse href='%23s' x='16' y='5'/%3E%3Cuse href='%23s' x='14' y='2'/%3E%3Cuse href='%23s' x='11' y='11'/%3E%3Cuse href='%23s' x='6' y='14'/%3E%3C/g%3E%3Cg fill='%23efefef'%3E%3Cuse href='%23s' x='3' y='13'/%3E%3Cuse href='%23s' x='9' y='7'/%3E%3Cuse href='%23s' x='13' y='10'/%3E%3Cuse href='%23s' x='15' y='4'/%3E%3Cuse href='%23s' x='18' y='1'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='e' width='47' height='53' patternUnits='userSpaceOnUse' patternTransform='scale(50) translate(-980 -735)'%3E%3Cg fill='%23F60'%3E%3Cuse href='%23s' x='2' y='5'/%3E%3Cuse href='%23s' x='16' y='38'/%3E%3Cuse href='%23s' x='46' y='42'/%3E%3Cuse href='%23s' x='29' y='20'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='f' width='59' height='71' patternUnits='userSpaceOnUse' patternTransform='scale(50) translate(-980 -735)'%3E%3Cg fill='%23F60'%3E%3Cuse href='%23s' x='33' y='13'/%3E%3Cuse href='%23s' x='27' y='54'/%3E%3Cuse href='%23s' x='55' y='55'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='g' width='139' height='97' patternUnits='userSpaceOnUse' patternTransform='scale(50) translate(-980 -735)'%3E%3Cg fill='%23F60'%3E%3Cuse href='%23s' x='11' y='8'/%3E%3Cuse href='%23s' x='51' y='13'/%3E%3Cuse href='%23s' x='17' y='73'/%3E%3Cuse href='%23s' x='99' y='57'/%3E%3C/g%3E%3C/pattern%3E%3C/defs%3E%3Crect fill='url(%23a)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23b)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23h)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23c)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23d)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23e)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23f)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23g)' width='100%25' height='100%25'/%3E%3C/svg%3E");
+			background-attachment: fixed;
+			background-size: cover;
+			color: #222;
+			transition: background 0.5s ease, color 0.5s ease;
+		}
+
+		body.night {
+			background-color: #131313;
+			background-attachment: fixed;
+			background-size: cover;
+			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpolygon fill='%2313181a' points='1600 160 0 460 0 350 1600 50'/%3E%3Cpolygon fill='%23131d22' points='1600 260 0 560 0 450 1600 150'/%3E%3Cpolygon fill='%23122129' points='1600 360 0 660 0 550 1600 250'/%3E%3Cpolygon fill='%23122631' points='1600 460 0 760 0 650 1600 350'/%3E%3Cpolygon fill='%23122B38' points='1600 800 0 800 0 750 1600 450'/%3E%3C/g%3E%3C/svg%3E");
+			color: #eee;
+			transition: background 0.5s ease, color 0.5s ease;
+		}
+		
 	</style>
 </head>
 <body>
-<button class="menu-toggle d-md-none" id="toggleSidebar">Menu</button>
+<button id="theme-toggle" style="position: fixed; top: 1rem; right: 1rem; background: none; border: none; font-size: 2rem; z-index: 999; color: inherit;">
+	<i id="theme-icon" class="fas"></i>
+</button>
 
 <nav class="sidebar d-flex flex-column" id="sidebar">
-	<a href="#accueil"><img src="../images/thumbs/min/PhotoTom.webp"></a>
+	<button class="menu-toggle fa-solid fa-bars " id="toggleSidebar"></button>
+	<a href="#accueil"><img src="../images/thumbs/min/PhotoTom.webp" alt="Accueil"></a>
 	<a href="#contact">Contact</a>
 	<a href="#projet1"><img src="../images/thumbs/min/Pirate_Chips.webp" alt="Pirate Chips"></a>
 	<a href="#projet2"><img src="../images/thumbs/min/03-min.webp" alt="Poulpoutou"></a>
@@ -152,7 +202,6 @@
 	<a href="#projet6"><img src="../images/thumbs/min/01-min.webp" alt="SAGE"></a>
 	<a href="#projet7"><img src="../images/thumbs/min/Gang_Graine.webp" alt="Gang Graine"></a>
 	<a href="#projet8"><img src="../images/thumbs/min/wisp.webp" alt="Wisp"></a>
-	<!--<a href="#projet9"><img src="images/thumbs/min/DiceAgainst.webp" alt="Dice"></a>-->
 </nav>
 
 <div class="content" id="mainContent">
@@ -429,8 +478,19 @@
 
 <script>
 	// Toggle Sidebar
+	const menuToggle = document.getElementById('toggleSidebar');
+	const sidebar = document.getElementById('sidebar');
+	
 	document.getElementById('toggleSidebar').addEventListener('click', () => {
-		document.getElementById('sidebar').classList.toggle('show');
+		sidebar.classList.toggle('show');
+		menuToggle.classList.add('fade-out');
+		setTimeout(() => {
+			menuToggle.classList.toggle('fa-bars');
+			menuToggle.classList.toggle('fa-xmark');
+
+			// Animation "in"
+			menuToggle.classList.remove('fade-out');
+		}, 200);
 	});
 
 	// Scroll to section and highlight active
@@ -458,6 +518,30 @@
 			}
 		});
 	});
+	
+	const toggleBtn = document.getElementById('theme-toggle');
+	const themeIcon = document.getElementById('theme-icon');
+
+	const savedTheme = localStorage.getItem('theme');
+	const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+	const defaultTheme = savedTheme || (prefersDark ? 'night' : 'day');
+
+	document.body.classList.add(defaultTheme);
+	updateIcon(defaultTheme);
+
+	toggleBtn.addEventListener('click', () => {
+		const current = document.body.classList.contains('night') ? 'night' : 'day';
+		const newTheme = current === 'night' ? 'day' : 'night';
+		document.body.classList.remove(current);
+		document.body.classList.add(newTheme);
+		localStorage.setItem('theme', newTheme);
+		updateIcon(newTheme);
+	});
+
+	function updateIcon(theme) {
+		themeIcon.className = 'fas ' + (theme === 'night' ? 'fa-sun' : 'fa-moon');
+	}
+
 </script>
 </body>
 </html>
