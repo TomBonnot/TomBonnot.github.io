@@ -4,506 +4,241 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<title>Mon Portfolio</title>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+	<link rel="stylesheet" rel="preconnect" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap" rel="stylesheet">
-	<style>
-		html, body {
-			height: 100%;
-			scroll-behavior: smooth;
-			overflow: hidden;
-		}
-
-		body {
-			
-			/* Background avec mon image
-			background-image: url("../images/Black_Blue.webp");
-			background-size: cover;
-			background-repeat: no-repeat;
-			background-position: center center;*/
-			
-			/* Premier jet de svg background 
-			background-color: #111111;
-			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpolygon fill='%230e1419' points='1600 160 0 460 0 350 1600 50'/%3E%3Cpolygon fill='%230a1720' points='1600 260 0 560 0 450 1600 150'/%3E%3Cpolygon fill='%23071b28' points='1600 360 0 660 0 550 1600 250'/%3E%3Cpolygon fill='%23031e2f' points='1600 460 0 760 0 650 1600 350'/%3E%3Cpolygon fill='%23002137' points='1600 800 0 800 0 750 1600 450'/%3E%3C/g%3E%3C/svg%3E");
-			background-attachment: fixed;
-			background-size: cover; */
-
-			background-color: #131313;
-			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpolygon fill='%2313181a' points='1600 160 0 460 0 350 1600 50'/%3E%3Cpolygon fill='%23131d22' points='1600 260 0 560 0 450 1600 150'/%3E%3Cpolygon fill='%23122129' points='1600 360 0 660 0 550 1600 250'/%3E%3Cpolygon fill='%23122631' points='1600 460 0 760 0 650 1600 350'/%3E%3Cpolygon fill='%23122B38' points='1600 800 0 800 0 750 1600 450'/%3E%3C/g%3E%3C/svg%3E");
-			background-attachment: fixed;
-			background-size: cover;
-			font-family: "Ubuntu", sans-serif;
-			font-weight: 500;
-			font-style: normal;
-			color: #fff;
-			min-height: 100vh;
-		}
-		
-		h2 {
-			font-family: "Ubuntu", sans-serif;
-			font-weight: 700;
-			font-style: normal;
-		}
-		
-		.titre {
-			font-family: "Ubuntu", sans-serif;
-			font-weight: 300;
-			font-size: 20px;
-			font-style: italic;
-		}
-
-		.sidebar {
-			height: 100vh;
-			position: fixed;
-			width: 200px;
-			z-index: 1030;
-		}
-
-		.sidebar a {
-			display: block;
-			height: calc(100%/9);
-			overflow: visible;
-			transition: all 0.3s ease;
-		}
-
-		.sidebar a img {
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
-			transition: transform 0.3s ease;
-		}
-
-		.sidebar a:hover img {
-			transform: scale(1.10) translateX(5px);
-			box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-			border-radius: 5px;
-			z-index: 10;
-		}
-		.sidebar a.active img {
-			transform: scale(1.25) translateX(10px);
-			box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-			border-radius: 5px;
-			z-index: 10;
-		}
-
-		.content {
-			margin-left: 200px;
-			height: 100vh;
-			overflow-y: auto;
-			scroll-snap-type: y mandatory;
-		}
-
-		section {
-			scroll-snap-align: start;
-			height: 100vh;
-			padding: 2rem;
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-		}
-
-		section img {
-			width: 97%;
-			margin: 10px;
-			object-fit: cover;
-		}
-		
-		.img-section {
-			max-height: 80vh;
-			overflow-y: auto;
-			overflow-x: hidden;
-		}
-
-		@media (min-width: 769px) {
-			.menu-toggle {
-				display: none;
-			}
-		}
-
-		@media (max-width: 768px) {
-			.sidebar {
-				transform: translateX(-100%);
-				transition: transform 0.3s ease;
-			}
-
-			.sidebar.show {
-				transform: translateX(0);
-			}
-
-			.content {
-				margin-left: 0;
-			}
-
-			.menu-toggle {
-				color: inherit;
-				position: fixed;
-				left: 15rem;
-				top: 1.7rem;
-				z-index: 1040;
-				background: transparent;
-				font-size: 1.8rem;
-				border: none;
-				transition: transform 0.1s ease, opacity 0.3s ease;
-			}
-
-			.menu-toggle.fade-out {
-				opacity: 0;
-				transform: rotate(45deg);
-			}
-			
-			.img-section {
-				max-height: 20vh;
-			}
-			
-			section p {
-				max-height: 50vh;
-				overflow-y: auto;
-				font-size: smaller;
-			}
-		}
-
-		#theme-toggle {
-			transition: transform 0.3s ease;
-		}
-
-		#theme-toggle:hover {
-			transform: scale(1.2);
-		}
-
-		#theme-icon {
-			transition: opacity 0.3s ease;
-			opacity: 1;
-		}
-		
-		#theme-icon.fade-out {
-			opacity: 0;
-		}
-
-		body.day {
-			background-color: #FFFFFF;
-			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpolygon fill='%23fff7f2' points='1600 160 0 460 0 350 1600 50'/%3E%3Cpolygon fill='%23ffefe5' points='1600 260 0 560 0 450 1600 150'/%3E%3Cpolygon fill='%23ffe8d8' points='1600 360 0 660 0 550 1600 250'/%3E%3Cpolygon fill='%23ffe0cb' points='1600 460 0 760 0 650 1600 350'/%3E%3Cpolygon fill='%23FFD8BE' points='1600 800 0 800 0 750 1600 450'/%3E%3C/g%3E%3C/svg%3E");
-			background-attachment: fixed;
-			background-size: cover;
-			color: #222;
-			transition: background 0.5s ease, color 0.5s ease;
-		}
-
-		body.night {
-			background-color: #131313;
-			background-attachment: fixed;
-			background-size: cover;
-			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpolygon fill='%2313181a' points='1600 160 0 460 0 350 1600 50'/%3E%3Cpolygon fill='%23131d22' points='1600 260 0 560 0 450 1600 150'/%3E%3Cpolygon fill='%23122129' points='1600 360 0 660 0 550 1600 250'/%3E%3Cpolygon fill='%23122631' points='1600 460 0 760 0 650 1600 350'/%3E%3Cpolygon fill='%23122B38' points='1600 800 0 800 0 750 1600 450'/%3E%3C/g%3E%3C/svg%3E");
-			color: #eee;
-			transition: background 0.5s ease, color 0.5s ease;
-		}
-		
-	</style>
+	<link rel="preload" href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap" rel="stylesheet">
+	<link href="../assets/WIP/main.css" rel="stylesheet">
 </head>
-<body>
-<button id="theme-toggle" style="position: fixed; top: 1rem; right: 2rem; font-size: 2rem; z-index: 999; color: inherit; background: none; border: none;">
-	<i id="theme-icon" class="bi "></i>
-</button>
+	<body>
+		<button id="theme-toggle" style="position: fixed; top: 1rem; right: 2rem; font-size: 2rem; z-index: 999; color: inherit; background: none; border: none;">
+			<i id="theme-icon" class="bi "></i>
+		</button>
 
-<nav class="sidebar d-flex flex-column" id="sidebar">
-	<button class="menu-toggle fa-solid fa-bars " id="toggleSidebar"></button>
-	<a href="#accueil"><img rel="preload" src="../images/thumbs/min/PhotoTom_Inverse.webp" style="left: 1rem;" alt="Accueil"></a>
-	<a href="#projet1"><img rel="preload" src="../images/thumbs/min/Pirate_Chips.webp" alt="Pirate Chips"></a>
-	<a href="#projet2"><img rel="preload" src="../images/thumbs/min/03-min.webp" alt="Poulpoutou"></a>
-	<a href="#projet3"><img rel="preload" src="../images/thumbs/min/EauScours.webp" alt="Eau'Scours"></a>
-	<a href="#projet4"><img rel="preload" src="../images/thumbs/min/Backstage_cut.webp" alt="Backstage"></a>
-	<a href="#projet5"><img rel="preload" src="../images/thumbs/min/Color_Quest.webp" alt="Color Quest"></a>
-	<a href="#projet6"><img rel="preload" src="../images/thumbs/min/01-min.webp" alt="SAGE"></a>
-	<a href="#projet7"><img rel="preload" src="../images/thumbs/min/Gang_Graine.webp" alt="Gang Graine"></a>
-	<a href="#projet8"><img rel="preload" src="../images/thumbs/min/wisp.webp" alt="Wisp"></a>
-</nav>
+		<nav class="sidebar d-flex flex-column" id="sidebar">
+			<button class="menu-toggle fa-solid fa-bars " id="toggleSidebar"></button>
+			<a href="#accueil"><img rel="preload" src="../images/thumbs/min/PhotoTom_Inverse.webp" style="left: 1rem;" alt="Accueil"></a>
+			<a href="#projet1"><img rel="preload" src="../images/thumbs/min/Pirate_Chips.webp" alt="Pirate Chips"></a>
+			<a href="#projet2"><img rel="preload" src="../images/thumbs/min/03-min.webp" alt="Poulpoutou"></a>
+			<a href="#projet3"><img rel="preload" src="../images/thumbs/min/EauScours.webp" alt="Eau'Scours"></a>
+			<a href="#projet4"><img rel="preload" src="../images/thumbs/min/Backstage_cut.webp" alt="Backstage"></a>
+			<a href="#projet5"><img rel="preload" src="../images/thumbs/min/Color_Quest.webp" alt="Color Quest"></a>
+			<a href="#projet6"><img rel="preload" src="../images/thumbs/min/01-min.webp" alt="SAGE"></a>
+			<a href="#projet7"><img rel="preload" src="../images/thumbs/min/Gang_Graine.webp" alt="Gang Graine"></a>
+			<a href="#projet8"><img rel="preload" src="../images/thumbs/min/wisp.webp" alt="Wisp"></a>
+		</nav>
 
-<div class="content" id="mainContent">
-	<section id="accueil">
-		<h2>Bienvenue !</h2>
-		<p></p>
-	</section>
+		<div class="content" id="mainContent">
+			<section id="accueil">
+				<h2>Bienvenue !</h2>
+				<p></p>
+			</section>
 
-	<!-- Pirate Chips -->
-	<section id="projet1" >
-		<div class="container-fluid">
-			<div class="row align-items-center">
-				
-				<div class="col-md-5 mb-4 mb-md-0 img-section">
-					<img src="../images/thumbs/PC-01.webp" alt="Pirate Chips" class="img-fluid rounded shadow" loading="lazy">
-					<img src="../images/thumbs/PC-01.webp" alt="Pirate Chips" class="img-fluid rounded shadow" loading="lazy">
-					<img src="../images/thumbs/PC-01.webp" alt="Pirate Chips" class="img-fluid rounded shadow" loading="lazy">
-					<img src="../images/thumbs/PC-01.webp" alt="Pirate Chips" class="img-fluid rounded shadow" loading="lazy">
+			<!-- Pirate Chips -->
+			<section id="projet1" >
+				<div class="container-fluid">
+					<div class="row align-items-center">
+						
+						<div class="col-md-5 mb-4 mb-md-0 img-section">
+							<img src="../images/thumbs/PC-01.webp" alt="Pirate Chips" class="img-fluid rounded shadow" loading="lazy">
+							<img src="../images/thumbs/PC-01.webp" alt="Pirate Chips" class="img-fluid rounded shadow" loading="lazy">
+							<img src="../images/thumbs/PC-01.webp" alt="Pirate Chips" class="img-fluid rounded shadow" loading="lazy">
+							<img src="../images/thumbs/PC-01.webp" alt="Pirate Chips" class="img-fluid rounded shadow" loading="lazy">
+						</div>
+						
+						<div class="col-md-7">
+							<h2 class="mb-3">Pirate Chips</h2>
+							<p class="titre">Rôle sur le projet : Direction Créative, chef de projet</p>
+							<p>Soyez le plus patate des moussaillons et prenez part à cette bataille sans foi ni loi !<br>
+								<br>
+								Projet réalisé en quatre mois dans le cadre du DESS en Design de jeux à l’Université de Montréal. <br><br>
+								J’y ai assuré la gestion de projet : organisation des réunions, suivi des tâches via des SCRUM réguliers, 
+								coordination d’une équipe soudée, incluant 4 membres externes.<br>
+								J’ai aussi contribué à la modélisation 3D, renforçant mes compétences artistiques et ma maîtrise de la méthodologie AGILE.<br><br>
+								Une expérience humaine forte, un prototype prometteur… et une aventure qui continue !
+							</p>
+						</div>
+					</div>
 				</div>
-				
-				<div class="col-md-7">
-					<h2 class="mb-3">Pirate Chips</h2>
-					<p class="titre">Rôle sur le projet : Direction Créative, chef de projet</p>
-					<p>Soyez le plus patate des moussaillons et prenez part à cette bataille sans foi ni loi !<br>
-						<br>
-						Projet réalisé en quatre mois dans le cadre du DESS en Design de jeux à l’Université de Montréal. <br><br>
-						J’y ai assuré la gestion de projet : organisation des réunions, suivi des tâches via des SCRUM réguliers, 
-						coordination d’une équipe soudée, incluant 4 membres externes.<br>
-						J’ai aussi contribué à la modélisation 3D, renforçant mes compétences artistiques et ma maîtrise de la méthodologie AGILE.<br><br>
-						Une expérience humaine forte, un prototype prometteur… et une aventure qui continue !
-					</p>
+			</section>
+
+			<!-- Poulpoutou -->
+			<section id="projet2">
+				<div class="container-fluid">
+					<div class="row align-items-center">
+
+						<div class="col-md-5 mb-4 mb-md-0 img-section">
+							<img src="../images/Captions/POULPOUTOU/POULPOUTOU_01.webp" alt="Pirate Chips" class="img-fluid rounded shadow" loading="lazy">
+							<img src="../images/Captions/POULPOUTOU/POULPOUTOU_02.webp" alt="Pirate Chips" class="img-fluid rounded shadow" loading="lazy">
+							<img src="../images/Captions/POULPOUTOU/POULPOUTOU_03.webp" alt="Pirate Chips" class="img-fluid rounded shadow" loading="lazy">
+						</div>
+						<div class="col-md-7">
+							<h2 class="mb-3">L'Empire Poulpoutou</h2>
+							<p class="titre">Rôle sur le projet : Direction Créative, chef de projet</p>
+							<p>Projet réalisé en 7 mois, durant la deuxième année de la maîtrise MAJIC à Cannes, force de proposition l’année précédente pour être choisi pour le développement.<br>
+								Le premier vrai projet grandeur nature que j’ai pu gérer et diriger, la gestion de projet, des tâches et des responsabilités de chacun.e.<br><br>
+								Une équipe de dix personnes autour du même projet et de la même idée, donner vie à ce royaume de poulpe. Un aventure unique dans mes débuts dans la gestion de projet 
+								et la réalisation de jeux vidéo.<br>
+								Un rendu plus qu’à la hauteur des attentes, une équipe fière de son travail, tous.tes étions fier.es de le réaliser ensemble, décrochant la meilleur note face aux autres projets.
+								<br><br>
+								Ce projet a été présenté au Festival International du Jeu à Cannes en 2020.
+							</p>
+						</div>
+					</div>
 				</div>
-			</div>
+			</section>
+
+			<!-- Eau Scours -->
+			<section id="projet3">
+				<div class="container-fluid">
+					<div class="row align-items-center">
+
+						<div class="col-md-5 mb-4 mb-md-0 img-section"></div>
+
+						<div class="col-md-7">
+							<h2 class="mb-3">Eau'Scours</h2>
+							<p class="titre">Présentation d'un pitch à l'Indie Asylum</p>
+							<p>Petit projet Unity pour une présentation d’un pitch, un projet portant sur la question de l’eau, son utilisation et les moyens de la préserver<br>
+								Projet de jeu sérieux, avec une forme plus attractive, qui permettrait d’éduquer sur la gestion de l’eau ainsi que les gestes du quotidien qui peuvent
+								empêcher sa contamination ou sa pollution.<br><br>
+								Une idée de jeu, qui plus est un jeu sérieux (ou jeu à agenda), qui me touche particulièrement car il démontre ma motivation, en créant un pseudo prototype 
+								intégrant des diapositives pour la présentation, mais aussi mes convictions, tant pour le côté social et pédaogigique, mais engagé pour des causes communes. 
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Backstage -->
+			<section id="projet4">
+				<div class="container-fluid">
+					<div class="row align-items-center">
+
+						<div class="col-md-5 mb-4 mb-md-0 img-section">
+							<img src="../images/Captions/BACKSTAGE/04.webp" class="img-fluid rounded shadow" loading="lazy">
+							<img src="../images/Captions/BACKSTAGE/01.webp" class="img-fluid rounded shadow" loading="lazy">
+							<img src="../images/Captions/BACKSTAGE/02.webp" class="img-fluid rounded shadow" loading="lazy">
+							<img src="../images/Captions/BACKSTAGE/03.webp" class="img-fluid rounded shadow" loading="lazy">
+						</div>
+
+						<div class="col-md-7">
+							<h2 class="mb-3">Backstage</h2>
+							<p class="titre">Rôle sur le projet : Artiste 3D</p>
+							<p>Game Jam de une semaine, première fois que je participe à une jam aussi longue, et cela m’a permis de prendre le temps et de tester un style qui me plait
+								la 3D pixel art (non voxel, mais texture pixel art). <br>
+								Nous étions cinq sur le projet, avec mon coéquipier habituel des jams réalisées sur Montréal.<br><br>
+								Je pense que c’était une bonne expérience pour ma gestion personnelle de mes propres tâches, de mes rendus et de voir que je suis capable de faire mieux que d’habitude
+								avec un petit peu plus de temps de création.<br><br>
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			
+			<!-- Color Quest -->
+			<section id="projet5">
+				<div class="container-fluid">
+					<div class="row align-items-center">
+
+						<!-- à reprendre des screenshots -->
+						<div class="col-md-5 mb-4 mb-md-0 img-section">
+							<img src="../images/Captions/COLORQUEST/01.webp" class="img-fluid rounded shadow" loading="lazy">
+							<img src="../images/Captions/COLORQUEST/02.webp" class="img-fluid rounded shadow" loading="lazy">
+							<img src="../images/Captions/COLORQUEST/03.webp" class="img-fluid rounded shadow" loading="lazy">
+						</div>
+
+						<div class="col-md-7">
+							<h2 class="mb-3">Color Quest</h2>
+							<p class="titre">Rôle sur le projet : Artiste</p>
+							<p>Game Jam d’une fin de semaine, qui a donné naissance à un projet qui s’est vu sur le plus long terme <br><br>
+								Effectivement nous avons continué le développement après la jam, se concentrant sur ajouter des mécaniques et des niveaux.<br>
+								Nous avons eux beaucoup de fun à faire cette jam, et voir se projet grandir petit à petit. la dernière version étant la meilleure à date, le projet a vu un 
+								suivis intéressant pendant un moment, puis nous avons décidé de le laisser dans un état plus avancé, et que l’on considérait comme bon.<br><br>
+								Cela m’a permis de tester des petites choses avec des couleurs plus intenses, comprendre comment rendre visibles certaines choses en orthographique.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- SAGE -->
+			<section id="projet6">
+				<div class="container-fluid">
+					<div class="row align-items-center">
+
+						<div class="col-md-5 mb-4 mb-md-0 img-section">
+							<img src="../images/Captions/SAGE/screen_01.webp" class="img-fluid rounded shadow" loading="lazy">
+							<img src="../images/Captions/SAGE/screen_02.webp" class="img-fluid rounded shadow" loading="lazy">
+							<img src="../images/Captions/SAGE/screen_03.webp" class="img-fluid rounded shadow" loading="lazy">
+							<img src="../images/Captions/SAGE/screen_04.webp" class="img-fluid rounded shadow" loading="lazy">
+						</div>
+
+						<div class="col-md-7">
+							<h2 class="mb-3">SAGE : l'art de ne pas l'être</h2>
+							<p class="titre">Rôle sur le projet : Artiste Voxel</p>
+							<p>Game Jam de fin de semaine réalisée en 2021 (Video Games Lab Gamejam).<br>
+								Très bonne expérience, et surtout un moyen d’essayer un style que j’affection, le voxel.<br><br>
+								Recréer un environnement d’une vieille salle d’arcade (peut être un peu plus colorée qu’à l’époque) en voxel était vraiment fun
+								et m’a permis de m’amuser avec les logicels de voxel. <br>
+								J’en garde un très bon souvenir et une bonne opportunité de tester ce style, cependant il engendre certains problèmes de performance, qu’un petit 
+								jeu ne devrait pas être aussi gourmant.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Gang Graine -->
+			<section id="projet7">
+				<div class="container-fluid">
+					<div class="row align-items-center">
+
+						<div class="col-md-5 mb-4 mb-md-0 img-section">
+							<img src="../images/Captions/GANGGRAINE/01.webp" class="img-fluid rounded shadow" loading="lazy">
+						</div>
+
+						<div class="col-md-7">
+							<h2 class="mb-3">Gang Graine</h2>
+							<p class="titre">Rôle sur le projet : Artiste 3D, Level Design</p>
+							<p>Game Jam d’une fin de semaine (plutôt réalisée en un jour et demi), un vrai défi de quantité de production<br><br>
+								Effectivement j’ai du réaliser une petite ville dans un style cartoon, création de plusieurs assets avec un pipeline bien défini,
+								de la modélisation, en texture et en intégrant le tout dans une scène sur Unity.<br><br>
+								La création du niveau en entier était un défi dans la rapidité car cela prend énormément de temps, mais cela m’a permis de peaufiné mes capacités à 
+								gérer des éléments dans une scène sur Unity.<br><br>
+								Le rendu était comme attendu, et l’expérience prise par ce petit projet est intéressant tant pour le temps restraint que pour la quantité de travail à fournir.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- WISP-->
+			<section id="projet8">
+				<div class="container-fluid">
+					<div class="row align-items-center">
+
+						<div class="col-md-5 mb-4 mb-md-0 img-section">
+							<img src="../images/Captions/WISP/screen_01.webp" class="img-fluid rounded shadow" loading="lazy">
+							<img src="../images/Captions/WISP/screen_02.webp" class="img-fluid rounded shadow" loading="lazy">
+							<img src="../images/Captions/WISP/screen_03.webp" class="img-fluid rounded shadow" loading="lazy">
+							<img src="../images/Captions/WISP/screen_04.webp" class="img-fluid rounded shadow" loading="lazy">
+						</div>
+
+						<div class="col-md-7">
+							<h2 class="mb-3">WISP</h2>
+							<p class="titre">Rôle sur le projet : Artiste 3D et Level Design</p>
+							<p>Une des premières game jams que j'ai pu faire, et une des plus intéressante<br><br>
+								Pouvoir me concentrer sur ce que je savais faire et avoir une équipe bien équilibrée, cela donne un résultat
+								sur le polish très intéressant pour un projet d'une fin de semaine.<br><br>
+								J'en retiens toujours une belle expérience qui m'avait permis de comprendre mieux chaque rôle dans une création de jeu vidéo.
+
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
 		</div>
-	</section>
-
-	<!-- Poulpoutou -->
-	<section id="projet2">
-		<div class="container-fluid">
-			<div class="row align-items-center">
-
-				<div class="col-md-5 mb-4 mb-md-0 img-section">
-					<img src="../images/Captions/POULPOUTOU/POULPOUTOU_01.webp" alt="Pirate Chips" class="img-fluid rounded shadow" loading="lazy">
-					<img src="../images/Captions/POULPOUTOU/POULPOUTOU_02.webp" alt="Pirate Chips" class="img-fluid rounded shadow" loading="lazy">
-					<img src="../images/Captions/POULPOUTOU/POULPOUTOU_03.webp" alt="Pirate Chips" class="img-fluid rounded shadow" loading="lazy">
-				</div>
-				<div class="col-md-7">
-					<h2 class="mb-3">L'Empire Poulpoutou</h2>
-					<p class="titre">Rôle sur le projet : Direction Créative, chef de projet</p>
-					<p>Projet réalisé en 7 mois, durant la deuxième année de la maîtrise MAJIC à Cannes, force de proposition l’année précédente pour être choisi pour le développement.<br>
-						Le premier vrai projet grandeur nature que j’ai pu gérer et diriger, la gestion de projet, des tâches et des responsabilités de chacun.e.<br><br>
-						Une équipe de dix personnes autour du même projet et de la même idée, donner vie à ce royaume de poulpe. Un aventure unique dans mes débuts dans la gestion de projet 
-						et la réalisation de jeux vidéo.<br>
-						Un rendu plus qu’à la hauteur des attentes, une équipe fière de son travail, tous.tes étions fier.es de le réaliser ensemble, décrochant la meilleur note face aux autres projets.
-						<br><br>
-						Ce projet a été présenté au Festival International du Jeu à Cannes en 2020.
-					</p>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<!-- Eau Scours -->
-	<section id="projet3">
-		<div class="container-fluid">
-			<div class="row align-items-center">
-
-				<div class="col-md-5 mb-4 mb-md-0 img-section"></div>
-
-				<div class="col-md-7">
-					<h2 class="mb-3">Eau'Scours</h2>
-					<p class="titre">Présentation d'un pitch à l'Indie Asylum</p>
-					<p>Petit projet Unity pour une présentation d’un pitch, un projet portant sur la question de l’eau, son utilisation et les moyens de la préserver<br>
-						Projet de jeu sérieux, avec une forme plus attractive, qui permettrait d’éduquer sur la gestion de l’eau ainsi que les gestes du quotidien qui peuvent
-						empêcher sa contamination ou sa pollution.<br><br>
-						Une idée de jeu, qui plus est un jeu sérieux (ou jeu à agenda), qui me touche particulièrement car il démontre ma motivation, en créant un pseudo prototype 
-						intégrant des diapositives pour la présentation, mais aussi mes convictions, tant pour le côté social et pédaogigique, mais engagé pour des causes communes. 
-					</p>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<!-- Backstage -->
-	<section id="projet4">
-		<div class="container-fluid">
-			<div class="row align-items-center">
-
-				<div class="col-md-5 mb-4 mb-md-0 img-section">
-					<img src="../images/Captions/BACKSTAGE/04.webp" class="img-fluid rounded shadow" loading="lazy">
-					<img src="../images/Captions/BACKSTAGE/01.webp" class="img-fluid rounded shadow" loading="lazy">
-					<img src="../images/Captions/BACKSTAGE/02.webp" class="img-fluid rounded shadow" loading="lazy">
-					<img src="../images/Captions/BACKSTAGE/03.webp" class="img-fluid rounded shadow" loading="lazy">
-				</div>
-
-				<div class="col-md-7">
-					<h2 class="mb-3">Backstage</h2>
-					<p class="titre">Rôle sur le projet : Artiste 3D</p>
-					<p>Game Jam de une semaine, première fois que je participe à une jam aussi longue, et cela m’a permis de prendre le temps et de tester un style qui me plait
-						la 3D pixel art (non voxel, mais texture pixel art). <br>
-						Nous étions cinq sur le projet, avec mon coéquipier habituel des jams réalisées sur Montréal.<br><br>
-						Je pense que c’était une bonne expérience pour ma gestion personnelle de mes propres tâches, de mes rendus et de voir que je suis capable de faire mieux que d’habitude
-						avec un petit peu plus de temps de création.<br><br>
-					</p>
-				</div>
-			</div>
-		</div>
-	</section>
-	
-	<!-- Color Quest -->
-	<section id="projet5">
-		<div class="container-fluid">
-			<div class="row align-items-center">
-
-				<!-- à reprendre des screenshots -->
-				<div class="col-md-5 mb-4 mb-md-0 img-section">
-					<img src="../images/Captions/COLORQUEST/01.webp" class="img-fluid rounded shadow" loading="lazy">
-					<img src="../images/Captions/COLORQUEST/02.webp" class="img-fluid rounded shadow" loading="lazy">
-					<img src="../images/Captions/COLORQUEST/03.webp" class="img-fluid rounded shadow" loading="lazy">
-				</div>
-
-				<div class="col-md-7">
-					<h2 class="mb-3">Color Quest</h2>
-					<p class="titre">Rôle sur le projet : Artiste</p>
-					<p>Game Jam d’une fin de semaine, qui a donné naissance à un projet qui s’est vu sur le plus long terme <br><br>
-						Effectivement nous avons continué le développement après la jam, se concentrant sur ajouter des mécaniques et des niveaux.<br>
-						Nous avons eux beaucoup de fun à faire cette jam, et voir se projet grandir petit à petit. la dernière version étant la meilleure à date, le projet a vu un 
-						suivis intéressant pendant un moment, puis nous avons décidé de le laisser dans un état plus avancé, et que l’on considérait comme bon.<br><br>
-						Cela m’a permis de tester des petites choses avec des couleurs plus intenses, comprendre comment rendre visibles certaines choses en orthographique.
-					</p>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<!-- SAGE -->
-	<section id="projet6">
-		<div class="container-fluid">
-			<div class="row align-items-center">
-
-				<div class="col-md-5 mb-4 mb-md-0 img-section">
-					<img src="../images/Captions/SAGE/screen_01.webp" class="img-fluid rounded shadow" loading="lazy">
-					<img src="../images/Captions/SAGE/screen_02.webp" class="img-fluid rounded shadow" loading="lazy">
-					<img src="../images/Captions/SAGE/screen_03.webp" class="img-fluid rounded shadow" loading="lazy">
-					<img src="../images/Captions/SAGE/screen_04.webp" class="img-fluid rounded shadow" loading="lazy">
-				</div>
-
-				<div class="col-md-7">
-					<h2 class="mb-3">SAGE : l'art de ne pas l'être</h2>
-					<p class="titre">Rôle sur le projet : Artiste Voxel</p>
-					<p>Game Jam de fin de semaine réalisée en 2021 (Video Games Lab Gamejam).<br>
-						Très bonne expérience, et surtout un moyen d’essayer un style que j’affection, le voxel.<br><br>
-						Recréer un environnement d’une vieille salle d’arcade (peut être un peu plus colorée qu’à l’époque) en voxel était vraiment fun
-						et m’a permis de m’amuser avec les logicels de voxel. <br>
-						J’en garde un très bon souvenir et une bonne opportunité de tester ce style, cependant il engendre certains problèmes de performance, qu’un petit 
-						jeu ne devrait pas être aussi gourmant.
-					</p>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<!-- Gang Graine -->
-	<section id="projet7">
-		<div class="container-fluid">
-			<div class="row align-items-center">
-
-				<div class="col-md-5 mb-4 mb-md-0 img-section">
-					<img src="../images/Captions/GANGGRAINE/01.webp" class="img-fluid rounded shadow" loading="lazy">
-				</div>
-
-				<div class="col-md-7">
-					<h2 class="mb-3">Gang Graine</h2>
-					<p class="titre">Rôle sur le projet : Artiste 3D, Level Design</p>
-					<p>Game Jam d’une fin de semaine (plutôt réalisée en un jour et demi), un vrai défi de quantité de production<br><br>
-						Effectivement j’ai du réaliser une petite ville dans un style cartoon, création de plusieurs assets avec un pipeline bien défini,
-						de la modélisation, en texture et en intégrant le tout dans une scène sur Unity.<br><br>
-						La création du niveau en entier était un défi dans la rapidité car cela prend énormément de temps, mais cela m’a permis de peaufiné mes capacités à 
-						gérer des éléments dans une scène sur Unity.<br><br>
-						Le rendu était comme attendu, et l’expérience prise par ce petit projet est intéressant tant pour le temps restraint que pour la quantité de travail à fournir.
-					</p>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<!-- WISP-->
-	<section id="projet8">
-		<div class="container-fluid">
-			<div class="row align-items-center">
-
-				<div class="col-md-5 mb-4 mb-md-0 img-section">
-					<img src="../images/Captions/WISP/screen_01.webp" class="img-fluid rounded shadow" loading="lazy">
-					<img src="../images/Captions/WISP/screen_02.webp" class="img-fluid rounded shadow" loading="lazy">
-					<img src="../images/Captions/WISP/screen_03.webp" class="img-fluid rounded shadow" loading="lazy">
-					<img src="../images/Captions/WISP/screen_04.webp" class="img-fluid rounded shadow" loading="lazy">
-				</div>
-
-				<div class="col-md-7">
-					<h2 class="mb-3">WISP</h2>
-					<p class="titre">Rôle sur le projet : Artiste 3D et Level Design</p>
-					<p>Une des premières game jams que j'ai pu faire, et une des plus intéressante<br><br>
-						Pouvoir me concentrer sur ce que je savais faire et avoir une équipe bien équilibrée, cela donne un résultat
-						sur le polish très intéressant pour un projet d'une fin de semaine.<br><br>
-						J'en retiens toujours une belle expérience qui m'avait permis de comprendre mieux chaque rôle dans une création de jeu vidéo.
-
-					</p>
-				</div>
-			</div>
-		</div>
-	</section>
-</div>
-
-<script>
-	// === Variables DOM ===
-	const sidebar = document.getElementById('sidebar');
-	const menuToggleBtn = document.getElementById('toggleSidebar');
-	const themeToggleBtn = document.getElementById('theme-toggle');
-	const themeIcon = document.getElementById('theme-icon');
-	const content = document.getElementById('mainContent');
-	const links = document.querySelectorAll('.sidebar a');
-	const sections = document.querySelectorAll('section');
-
-	// === TOGGLE MENU MOBILE ===
-	menuToggleBtn.addEventListener('click', () => {
-		sidebar.classList.toggle('show');
-
-		menuToggleBtn.classList.add('fade-out');
-		setTimeout(() => {
-			menuToggleBtn.classList.toggle('fa-bars');
-			menuToggleBtn.classList.toggle('fa-xmark');
-			menuToggleBtn.classList.remove('fade-out');
-		}, 200);
-	});
-
-	// === SCROLL VERS SECTION + LIEN ACTIF ===
-	links.forEach(link => {
-		link.addEventListener('click', e => {
-			e.preventDefault();
-			const target = document.querySelector(link.getAttribute('href'));
-			if (target) {
-				content.scrollTo({ top: target.offsetTop, behavior: 'smooth' });
-			}
-		});
-	});
-
-	content.addEventListener('scroll', () => {
-		sections.forEach(section => {
-			const rect = section.getBoundingClientRect();
-			if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
-				links.forEach(link => {
-					link.classList.toggle('active', link.getAttribute('href') === `#${section.id}`);
-				});
-			}
-		});
-	});
-
-	// === GESTION DU THÈME JOUR/NUIT ===
-	const savedTheme = localStorage.getItem('theme');
-	const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-	const defaultTheme = savedTheme || (prefersDark ? 'night' : 'day');
-
-	document.body.classList.add(defaultTheme);
-	updateThemeIcon(defaultTheme);
-
-	themeToggleBtn.addEventListener('click', () => {
-		const currentTheme = document.body.classList.contains('night') ? 'night' : 'day';
-		const newTheme = currentTheme === 'night' ? 'day' : 'night';
-
-		document.body.classList.remove(currentTheme);
-		document.body.classList.add(newTheme);
-		localStorage.setItem('theme', newTheme);
-		updateThemeIcon(newTheme);
-	});
-
-	function updateThemeIcon(theme) {
-		themeIcon.classList.add('fade-out');
-
-		setTimeout(() => {
-			themeIcon.className = theme === 'night'
-				? 'fa-solid fa-sun'
-				: 'fa-solid fa-moon';
-			themeIcon.classList.remove('fade-out');
-		}, 150);
-	}
-</script>
-
-</body>
+		<script src="../assets/WIP/main.js"></script>
+	</body>
 </html>
