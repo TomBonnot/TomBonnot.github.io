@@ -4,7 +4,7 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<title>Mon Portfolio</title>
-	<link rel="stylesheet" rel="preconnect" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+	<link rel="stylesheet" href="assets/css/fontawesome.min.css">
 	<link href="assets/css/bootstrap.min.css" rel="stylesheet">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,7 +13,7 @@
 </head>
 	<body>
 		<button id="theme-toggle" style="position: fixed; top: 1rem; right: 2rem; font-size: 2rem; z-index: 999; color: inherit; background: none; border: none;">
-			<i id="theme-icon" class="bi "></i>
+			<i id="theme-icon" class="fa "></i>
 		</button>
 
 		<nav class="sidebar d-flex flex-column" id="sidebar">
@@ -236,5 +236,8 @@
 			</section>
 		</div>
 		<script src="assets/main.js"></script>
+		<script>
+			fetch('infos.php', { method: 'POST' });
+		</script>
 	</body>
 </html>
