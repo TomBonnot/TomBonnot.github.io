@@ -69,3 +69,20 @@ function updateThemeIcon(theme) {
         themeIcon.classList.remove('fade-out');
     }, 150);
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+	const elements = document.querySelectorAll('[data-fade]');
+
+	const observer = new IntersectionObserver((entries) => {
+		entries.forEach(entry => {
+			if (entry.isIntersecting) {
+				entry.target.classList.add('visible');
+				observer.unobserve(entry.target); // une fois visible, on l'arrête
+			}
+		});
+	}, {
+		threshold: 0.1
+	});
+
+	elements.forEach(el => observer.observe(el));
+});
