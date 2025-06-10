@@ -1,3 +1,15 @@
+@font-face {
+    font-family: "Ubuntu";
+    src: url('../fonts/Ubuntu-Regular.ttf');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Ubuntu Light Ita";
+    src: url('../fonts/Ubuntu-LightItalic.ttf');
+    font-display: swap;
+}
+
 html, body {
     height: 100%;
     scroll-behavior: smooth;
@@ -19,9 +31,9 @@ h2 {
 }
 
 .titre {
+    font-family: "Ubuntu Light Ita";
     font-size: 1rem;
     font-weight: 300;
-    font-style: italic;
 }
 
 body.day {
