@@ -1,12 +1,12 @@
 @font-face {
     font-family: "Ubuntu";
-    src: url('../fonts/Ubuntu-Regular.ttf');
+    src: url('../fonts/Ubuntu-Regular.ttf'), sans-serif;
     font-display: swap;
 }
 
 @font-face {
     font-family: "Ubuntu Light Ita";
-    src: url('../fonts/Ubuntu-LightItalic.ttf');
+    src: url('../fonts/Ubuntu-LightItalic.ttf'), sans-serif;
     font-display: swap;
 }
 
