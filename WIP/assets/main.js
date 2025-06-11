@@ -97,10 +97,10 @@ langToggle.addEventListener('click', () => {
 		const currentPath = window.location.pathname;
 		const basePath = currentPath.includes('/en/') ? currentPath.split('/en/')[0] : currentPath.split('/index.html')[0];
 
-		if (currentPath.includes('/en/')) {
+		if (currentPath.includes('en/')) {
 			window.location.href = basePath + '/index.html';
 		} else {
-			window.location.href = basePath + 'en/index.html';
+			window.location.href = basePath + '/en/index.html';
 		}
 	}, 500);
 });
