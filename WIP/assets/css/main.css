@@ -52,6 +52,11 @@ body.night {
     background-size: cover;
 }
 
+body.fade-out {
+	opacity: 0;
+	transition: opacity 0.5s ease;
+}
+
 .sidebar {
     position: fixed;
     width: 200px;
@@ -218,6 +223,22 @@ section img {
     vertical-align: middle;
     fill: currentColor;
     transition: color 0.5s ease;
+}
+
+#lang-toggle {
+    position: fixed;
+    top: 1.6rem;
+    right: 5rem;
+    font-size: 2rem;
+    z-index: 999;
+    background: none;
+    border: none;
+    color: inherit;
+    transition: transform 0.3s ease;
+}
+
+#lang-toggle:hover {
+    transform: scale(1.2);
 }
 
 body.night .ico {

@@ -7,6 +7,12 @@ const content = document.getElementById('mainContent');
 const links = document.querySelectorAll('.sidebar a');
 const sections = document.querySelectorAll('section');
 
+const savedTheme = localStorage.getItem('theme');
+const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+const defaultTheme = savedTheme || (prefersDark ? 'night' : 'day');
+
+const langToggle = document.getElementById('lang-toggle');
+
 // === TOGGLE MENU MOBILE ===
 menuToggleBtn.addEventListener('click', () => {
     sidebar.classList.toggle('show');
@@ -42,10 +48,6 @@ content.addEventListener('scroll', () => {
 });
 
 // === GESTION DU THÈME JOUR/NUIT ===
-const savedTheme = localStorage.getItem('theme');
-const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-const defaultTheme = savedTheme || (prefersDark ? 'night' : 'day');
-
 document.body.classList.add(defaultTheme);
 updateThemeIcon(defaultTheme);
 
@@ -85,4 +87,21 @@ document.addEventListener("DOMContentLoaded", () => {
 	});
 
 	elements.forEach(el => observer.observe(el));
+});
+
+// === GESTION DE LA LANGUE ===
+
+langToggle.addEventListener('click', () => {
+	document.body.classList.add('fade-out');
+
+	setTimeout(() => {
+		const currentPath = window.location.pathname;
+		const basePath = currentPath.includes('/en/') ? currentPath.split('/en/')[0] : currentPath.split('/index.html')[0];
+
+		if (currentPath.includes('/en/')) {
+			window.location.href = basePath + '/index.html';
+		} else {
+			window.location.href = basePath + '/en/index.html';
+		}
+	}, 500);
 });
