@@ -90,7 +90,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // === GESTION DE LA LANGUE ===
-
 langToggle.addEventListener('click', () => {
 	document.body.classList.add('fade-out');
 
@@ -101,7 +100,7 @@ langToggle.addEventListener('click', () => {
 		if (currentPath.includes('/en/')) {
 			window.location.href = basePath + '/index.html';
 		} else {
-			window.location.href = basePath + '/en/index.html';
+			window.location.href = basePath + 'en/index.html';
 		}
 	}, 500);
 });
