@@ -90,17 +90,13 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // === GESTION DE LA LANGUE ===
-langToggle.addEventListener('click', () => {
-	document.body.classList.add('fade-out');
+langToggle.addEventListener("click", () => {
+    const currentPath = window.location.pathname;
+    const isEnglish = currentPath.includes("/en");
 
-	setTimeout(() => {
-		const currentPath = window.location.pathname;
-		const basePath = currentPath.includes('/en/') ? currentPath.split('/en/')[0] : currentPath.split('/index.html')[0];
+    const base = currentPath.split("/").filter(p => p !== "" && p !== "en");
+    const basePath = "/" + base.join("/");
 
-		if (currentPath.includes('en/')) {
-			window.location.href = basePath + '/index.html';
-		} else {
-			window.location.href = basePath + '/en/index.html';
-		}
-	}, 500);
+    const newPath = isEnglish ? basePath + "/" : basePath + "/en/";
+    window.location.href = newPath;
 });
