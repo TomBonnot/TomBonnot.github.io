@@ -119,6 +119,10 @@ section img {
     overflow-x: hidden;
 }
 
+.text-section {
+    padding-left: 5%;
+}
+
 @media (max-width: 768px) {
     .sidebar {
         transform: translateX(-100%);
@@ -172,6 +176,10 @@ section img {
     [data-fade="right"] {
         opacity: 1;
     }
+
+    .main_p {
+        text-align: center;
+    }
 }
 
 @media (min-width: 769px) {
@@ -191,6 +199,11 @@ section img {
 
     [data-fade="right"] {
         transform: translateX(-30px);
+    }
+
+    .main_p {
+        text-align: center;
+        width: 60%;
     }
 }
 
