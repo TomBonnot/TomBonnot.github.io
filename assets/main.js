@@ -91,16 +91,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // === GESTION DE LA LANGUE ===
 langToggle.addEventListener("click", () => {
-    document.body.classList.add('fade-out');
+	document.body.classList.add('fade-out');
 
-    setTimeout (() => {
-        const currentPath = window.location.pathname;
-        const isEnglish = currentPath.includes("/en");
+	setTimeout(() => {
+		const currentPath = window.location.pathname;
+		const isEnglish = currentPath.startsWith("/en");
 
-        const base = currentPath.split("/").filter(p => p !== "" && p !== "en");
-        const basePath = "/" + base.join("/");
-
-        const newPath = isEnglish ? basePath + "/" : basePath + "/en/";
-        window.location.href = newPath;
-    }, 500);
+		const newPath = isEnglish ? "/" : "/en/";
+		window.location.href = newPath;
+	}, 500);
 });
