@@ -101,3 +101,42 @@ langToggle.addEventListener("click", () => {
 		window.location.href = newPath;
 	}, 500);
 });
+
+const cvModal = document.getElementById('cv-modal');
+const closeBtn = document.querySelector('.close-btn');
+const cvBtn = document.querySelector('a[href$="Tom_Bonnot_CV.pdf"]');
+
+// Ouvre la modale
+cvBtn.addEventListener('click', (e) => {
+	e.preventDefault();
+	cvModal.style.display = 'flex';
+	setTimeout(() => {
+		cvModal.classList.add('show');
+	}, 10); // permet à l'animation de s'appliquer
+	document.body.style.overflow = 'hidden';
+});
+
+// Ferme la modale avec un bouton
+function closeModal() {
+	cvModal.classList.remove('show');
+	setTimeout(() => {
+		cvModal.style.display = 'none';
+		document.body.style.overflow = 'auto';
+	}, 300); // même durée que l’animation
+}
+
+closeBtn.addEventListener('click', closeModal);
+
+// Ferme la modale avec la touche ESC
+document.addEventListener('keydown', (e) => {
+	if (e.key === 'Escape' && cvModal.style.display === 'flex') {
+		closeModal();
+	}
+});
+
+// Ferme la modale au clic à l'extérieur de la modale
+cvModal.addEventListener('click', (e) => {
+	if (e.target === cvModal) {
+		closeModal();
+	}
+});
