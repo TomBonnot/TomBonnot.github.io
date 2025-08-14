@@ -67,7 +67,7 @@ body.fade-out {
 
 .sidebar a {
     display: block;
-    height: calc(100% / 9);
+    height: calc(100% / 8);
     transition: all 0.3s ease;
 }
 
